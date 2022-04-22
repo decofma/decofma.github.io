@@ -5,5 +5,8 @@
 
 // module.exports = {nextConfig}
 module.exports = {
-  assetPrefix: './'
-  }
+  images: {
+    loader: 'akamai',
+    path: '/',
+  },
+}
