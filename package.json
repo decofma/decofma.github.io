@@ -8,9 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "static": "next build && next export && touch ./out/.nojekyll && echo 'www.mywebsite.com' > ./out/CNAME",
-    "deploy": "gh-pages -d out -t true"
+    "export": "next export"
   },
   "dependencies": {
     "next": "12.1.5",
