@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-18.04
     defaults:
       run:
-        working-directory: ./github-page
+        working-directory: ./pages
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
