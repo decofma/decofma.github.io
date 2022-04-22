@@ -28,9 +28,7 @@ jobs:
 
     - name: Build my App  
       run: npm run build
-      
-    - run: npm run dev
-      
+            
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.5.9
