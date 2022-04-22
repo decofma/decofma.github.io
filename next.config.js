@@ -1,9 +1,10 @@
-const isProd = process.env.NODE_ENV === "production";
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+// }
 
+// module.exports = {nextConfig}
 module.exports = {
-  /**
-   * Tell Next.js where the `public` folder is.
-   * Replace `nextjs-github-pages` with your Github repo project name.
-   */
-  assetPrefix: isProd ? "/nextjs-github-pages/" : "",
-};
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH,
+  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH
+}
