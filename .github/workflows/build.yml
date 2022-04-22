@@ -30,9 +30,7 @@ jobs:
       run: npm run build
       env:
         NEXT_PUBLIC_BASE_PATH: /github-page
-    - run: npm run export
-      env:
-        NEXT_PUBLIC_BASE_PATH: /github-page
+    
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
