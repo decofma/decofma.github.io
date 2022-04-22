@@ -6,8 +6,8 @@
 // module.exports = {nextConfig}
 module.exports = {
   images: {
-    loader: 'cloudinary',    
+    loader: 'cloudinary',
+    path: '/',    
   },
-  path: '/',
   basePath: '/docs'
 }
