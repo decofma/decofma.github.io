@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  loader: 'cloudinary',
+  basePath: '/docs'
 }
 
 module.exports = {nextConfig}
