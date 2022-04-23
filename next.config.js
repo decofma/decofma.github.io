@@ -6,8 +6,8 @@
 // module.exports = {nextConfig}
 module.exports = {
   images: {
-    loader: "imgix",
-    path: "/",
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/decofma/",
     
   },
   assetPrefix: './',
