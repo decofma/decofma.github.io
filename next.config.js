@@ -1,17 +1,24 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    loader: 'akamai',
-    path: '/'
-  }
-}
-
-module.exports = {nextConfig}
-// module.exports = {
-//   images: {
-//     loader: 'akamai',
-//     path: '/',    
-//   },
-//   basePath: '/docs'
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
 // }
+
+// module.exports = {nextConfig}
+module.exports = {
+  images: {
+    loader: "custom",
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    nextImageExportOptimizer: {
+      imageFolderPath: "public",
+      exportFolderPath: "out",
+      quality: 75,
+    },
+  },
+  env: {
+    storePicturesInWEBP: true,
+  },
+  assetPrefix: './',
+  // basePath: '/docs',
+  reactStrictMode: true,
+};

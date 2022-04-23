@@ -1,33 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer";
 import styles from '../styles/Home.module.css';
 import 'primeicons/primeicons.css';
 import { Menubar } from 'primereact/menubar';
-import { Divider } from 'primereact/divider';
 import "primereact/resources/themes/lara-dark-purple/theme.css";  
 import "primereact/resources/primereact.min.css";                  
 import "primeicons/primeicons.css";
 import Link from 'next/link';
-import { Button } from 'primereact/button';
 import Typewriter from 'typewriter-effect';                              
 
 export default function Home() {
   const navbar = [
     {
-       label:<a>Home</a>,
+       label:<Link href="#home">Home</Link>,
        icon:'pi pi-fw pi-home'
     },
     {
-       label:<a>About</a>,
+       label:<Link href="#about">About</Link>,
        icon:'pi pi-fw pi-user'
     },
     {
-       label:<a>Tech</a>,
+       label:<Link href="#tech">Tech</Link>,
        icon:'pi pi-fw pi-hashtag'
     },
     {
-      label:<a>Contact</a>,
+      label:<Link href="#contact">Contact</Link>,
       icon:'pi pi-fw pi-at'
     }
    
@@ -36,8 +34,9 @@ export default function Home() {
     <a href='https://github.com/decofma'>
     <i className="pi pi-github" style={{'fontSize': '2em'}} ></i>
     </a>
-  ;  
-   
+  ;
+    
+  
 
   return (
     <>
@@ -55,8 +54,8 @@ export default function Home() {
 
       <main className={styles.main}>
         
-        <div >
-            <Image  src="/me.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
+        <div id="home">
+            <ExportedImage  src="/me.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
         </div>
 
         <h1 className={styles.title}>
@@ -78,7 +77,7 @@ export default function Home() {
             typewriter.typeString("Welcome to my portfolio.")
           }}/>
         </h1>
-        
+        <div id="about"></div>
         <div className={styles.bio}>
           <h3>A short bio</h3>
         </div>
@@ -96,27 +95,29 @@ export default function Home() {
           
             
           </div>
+          <div id="tech" className={styles.tech}></div>
           <div className={styles.card}> 
             <h2> Technologies that i work with </h2>
             <div className={styles.langform}>            
-              <Image  src="/atom.png" alt="React" title="React" width={50} height={50} quality={100} />            
-              <Image  src="/nextjs.png" alt="nextjs" title="Next.js" width={50} height={50} quality={100} />
-              <Image  src="/python.png" alt="python" title="Python" width={50} height={50} quality={100} /> 
-              <Image  src="/flask.png" alt="flask" title="Flask" width={50} height={50} quality={100} />
-              <Image  src="/java-script.png" alt="javascript" title="Javascript"width={50} height={50} quality={100} />
-              <Image  src="/type-script.png" alt="typescript" title="Typescript" width={50} height={50} quality={100} />
+              <ExportedImage  src="/atom.png" alt="React" title="React" width={50} height={50} quality={100} />            
+              <ExportedImage  src="/nextjs.png" alt="nextjs" title="Next.js" width={50} height={50} quality={100} />
+              <ExportedImage  src="/python.png" alt="python" title="Python" width={50} height={50} quality={100} /> 
+              <ExportedImage  src="/flask.png" alt="flask" title="Flask" width={50} height={50} quality={100} />
+              <ExportedImage  src="/java-script.png" alt="javascript" title="Javascript"width={50} height={50} quality={100} />
+              <ExportedImage  src="/type-script.png" alt="typescript" title="Typescript" width={50} height={50} quality={100} />
             </div>
             <div className={styles.langform}>
-            <Image  src="/c-.png" alt="" title="c" width={50} height={50} quality={100} />
-            <Image  src="/c-sharp.png" alt="" title="c#" width={50} height={50} quality={100} />
-            <Image  src="/css-3.png" alt="" title="css" width={50} height={50} quality={100} />
-            <Image  src="/html-5.png" alt="" title="html" width={50} height={50} quality={100} />
-            <Image  src="/photoshop.png" alt="" title="adobe photoshop" width={50} height={50} quality={100} />
-            <Image  src="/illustrator.png" alt="" title="adobe illustrator" width={50} height={50} quality={100} />
+            <ExportedImage  src="/c-.png" alt="c" title="c" width={50} height={50} quality={100} />
+            <ExportedImage  src="/c-sharp.png" alt="c#" title="c#" width={50} height={50} quality={100} />
+            <ExportedImage  src="/css-3.png" alt="css" title="css" width={50} height={50} quality={100} />
+            <ExportedImage  src="/html-5.png" alt="html" title="html" width={50} height={50} quality={100} />
+            <ExportedImage  src="/photoshop.png" alt="photoshop" title="adobe photoshop" width={50} height={50} quality={100} />
+            <ExportedImage  src="/illustrator.png" alt="illustrator" title="adobe illustrator" width={50} height={50} quality={100} />
             </div>
           </div>
         </div>
-        <div className={styles.contactBox}>
+        <div id="contact"/>
+        <div  className={styles.contactBox}>
           <h2>Where to find me 🙋🏻‍♂️</h2> 
           <div className={styles.contact}>
             
@@ -143,6 +144,7 @@ export default function Home() {
           by me.
       </footer>
     </div>
+    
     </>
   )
 }
