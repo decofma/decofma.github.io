@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "homepage": "https://decofma.github.io/github-page/",
+  "homepage": "https://decofma.github.io",
   "private": true,
   "scripts": {
     "dev": "next dev",
