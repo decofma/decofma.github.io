@@ -7,9 +7,9 @@
 module.exports = {
   images: {
     loader: "imgix",
-    path: "https://noop/",
+    path: "",
+    
   },
-  
   assetPrefix: './',
   // basePath: '/docs',
   reactStrictMode: true,
