@@ -6,7 +6,7 @@
 // module.exports = {nextConfig}
 module.exports = {
   images: {
-    loader: 'cloudinary',
+    loader: 'akamai',
     path: '/',    
   },
   basePath: '/docs'
