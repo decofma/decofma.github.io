@@ -1,15 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  loader: 'cloudinary',
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+// }
+
+// module.exports = {nextConfig}
+module.exports = {
+  images: {
+    loader: 'cloudinary',
+    path: '/',    
+  },
   basePath: '/docs'
 }
-
-module.exports = {nextConfig}
-// module.exports = {
-//   images: {
-//     loader: 'cloudinary',
-//     path: '/',    
-//   },
-//   basePath: '/docs'
-// }
