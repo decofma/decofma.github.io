@@ -1,13 +1,17 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-// }
-
-// module.exports = {nextConfig}
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   images: {
     loader: 'akamai',
-    path: '/',    
-  },
-  basePath: '/docs'
+    path: '/'
+  }
 }
+
+module.exports = {nextConfig}
+// module.exports = {
+//   images: {
+//     loader: 'akamai',
+//     path: '/',    
+//   },
+//   basePath: '/docs'
+// }
