@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import ExportedImage from "next-image-export-optimizer";
+import Image  from 'next/image';
 import styles from '../styles/Home.module.css';
 import 'primeicons/primeicons.css';
 import { Menubar } from 'primereact/menubar';
@@ -55,7 +55,7 @@ export default function Home() {
       <main className={styles.main}>
         
         <div id="home">
-            <ExportedImage  src="/me.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
+            <Image  src="/me.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
         </div>
 
         <h1 className={styles.title}>
@@ -99,20 +99,20 @@ export default function Home() {
           <div className={styles.card}> 
             <h2> Technologies that i work with </h2>
             <div className={styles.langform}>            
-              <ExportedImage  src="/atom.png" alt="React" title="React" width={50} height={50} quality={100} />            
-              <ExportedImage  src="/nextjs.png" alt="nextjs" title="Next.js" width={50} height={50} quality={100} />
-              <ExportedImage  src="/python.png" alt="python" title="Python" width={50} height={50} quality={100} /> 
-              <ExportedImage  src="/flask.png" alt="flask" title="Flask" width={50} height={50} quality={100} />
-              <ExportedImage  src="/java-script.png" alt="javascript" title="Javascript"width={50} height={50} quality={100} />
-              <ExportedImage  src="/type-script.png" alt="typescript" title="Typescript" width={50} height={50} quality={100} />
+              <Image  src="/atom.png" alt="React" title="React" width={50} height={50} quality={100} />            
+              <Image  src="/nextjs.png" alt="nextjs" title="Next.js" width={50} height={50} quality={100} />
+              <Image  src="/python.png" alt="python" title="Python" width={50} height={50} quality={100} /> 
+              <Image  src="/flask.png" alt="flask" title="Flask" width={50} height={50} quality={100} />
+              <Image  src="/java-script.png" alt="javascript" title="Javascript"width={50} height={50} quality={100} />
+              <Image  src="/type-script.png" alt="typescript" title="Typescript" width={50} height={50} quality={100} />
             </div>
             <div className={styles.langform}>
-            <ExportedImage  src="/c-.png" alt="c" title="c" width={50} height={50} quality={100} />
-            <ExportedImage  src="/c-sharp.png" alt="c#" title="c#" width={50} height={50} quality={100} />
-            <ExportedImage  src="/css-3.png" alt="css" title="css" width={50} height={50} quality={100} />
-            <ExportedImage  src="/html-5.png" alt="html" title="html" width={50} height={50} quality={100} />
-            <ExportedImage  src="/photoshop.png" alt="photoshop" title="adobe photoshop" width={50} height={50} quality={100} />
-            <ExportedImage  src="/illustrator.png" alt="illustrator" title="adobe illustrator" width={50} height={50} quality={100} />
+            <Image  src="/c-.png" alt="c" title="c" width={50} height={50} quality={100} />
+            <Image  src="/c-sharp.png" alt="c#" title="c#" width={50} height={50} quality={100} />
+            <Image  src="/css-3.png" alt="css" title="css" width={50} height={50} quality={100} />
+            <Image  src="/html-5.png" alt="html" title="html" width={50} height={50} quality={100} />
+            <Image  src="/photoshop.png" alt="photoshop" title="adobe photoshop" width={50} height={50} quality={100} />
+            <Image  src="/illustrator.png" alt="illustrator" title="adobe illustrator" width={50} height={50} quality={100} />
             </div>
           </div>
         </div>
