@@ -7,7 +7,7 @@
 module.exports = {
   images: {
     loader: "imgix",
-    path: "",
+    path: "/",
     
   },
   assetPrefix: './',
