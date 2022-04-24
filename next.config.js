@@ -7,7 +7,7 @@
 module.exports = {
   images: {
     loader: "cloudinary",
-    path: "https://res.cloudinary.com/decofma/image/upload/v1650757818/",
+    path: "https://res.cloudinary.com/decofma",
     
   },
   assetPrefix: './',
