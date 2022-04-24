@@ -7,8 +7,9 @@
 module.exports = {
   images: {
     loader: "cloudinary",
-    path: "res.cloudinary.com/decofma/",
-    
+    domains: [
+        'res.cloudinary.com'
+      ],    
   },
   assetPrefix: './',
   // basePath: '/docs',
