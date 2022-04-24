@@ -55,7 +55,7 @@ export default function Home() {
       <main className={styles.main}>
         
         <div id="home">
-            <Image  src="https://res.cloudinary.com/decofma/image/upload/v1650757818/me_fuyhxy.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
+            <Image  src="me_fuyhxy.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
         </div>
 
         <h1 className={styles.title}>
