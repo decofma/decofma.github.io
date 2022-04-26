@@ -13,27 +13,25 @@ import Typewriter from 'typewriter-effect';
 export default function Home() {
   const navbar = [
     {
-       label:<Link href="#home">Home</Link>,
-       icon:'pi pi-fw pi-home'
+       label:
+       <Link href="#home"><a><spam className={styles.imgnavbar}><Image  src="home.png" alt="React" title="React" width={30} height={30} quality={100}/></spam> Home </a></Link>
     },
     {
-       label:<Link href="#about">About</Link>,
-       icon:'pi pi-fw pi-user'
+       label:
+       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>About</a></Link>
     },
     {
-       label:<Link href="#tech">Tech</Link>,
-       icon:'pi pi-fw pi-hashtag'
+       label:
+       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>Tech</a></Link>
     },
     {
-      label:<Link href="#contact">Contact</Link>,
-      icon:'pi pi-fw pi-at'
+      label:
+      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>Contact</a></Link>
     }
    
   ];
   const end = 
-    <a href='https://github.com/decofma'>
-    <i className="pi pi-github" style={{'fontSize': '2em'}} ></i>
-    </a>
+    <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={30} height={30} quality={100} /></a>
   ;
     
   
@@ -54,8 +52,8 @@ export default function Home() {
 
       <main className={styles.main}>
         
-        <div id="home">
-            <Image  src="me.png" alt="yep, that's me" width={1000} height={700} layout={"fixed"} quality={100} />
+        <div name="home" className={styles.imagecontainer}>
+            <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"80px"} quality={100} priority={true}/>
         </div>
 
         <h1 className={styles.title}>
@@ -79,11 +77,10 @@ export default function Home() {
         </h1>
         <div id="about"></div>
         <div className={styles.bio}>
-          <h3>A short bio</h3>
-        </div>
-        <code className={styles.code}>
+          <code className={styles.code}>
             I’m a computer engineering student and fullstack developer in process
-        </code>
+          </code>
+        </div>
         
         <div className={styles.cardBoard}>
           <div className={styles.card}>
@@ -97,7 +94,7 @@ export default function Home() {
           </div>
           <div id="tech" className={styles.tech}></div>
           <div className={styles.card}> 
-            <h2> Technologies that i work with </h2>
+            <h2> Technologies that I work with </h2>
             <div className={styles.langform}>            
               <Image  src="/atom.png" alt="React" title="React" width={50} height={50} quality={100} />            
               <Image  src="/nextjs.png" alt="nextjs" title="Next.js" width={50} height={50} quality={100} />
@@ -122,19 +119,19 @@ export default function Home() {
           <div className={styles.contact}>
             
             <a href="https://www.linkedin.com/in/andreamferraz/">
-            <i className="pi pi-linkedin" style={{'fontSize': '2em'}}></i>
+            <Image  src="linkedin.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="https://www.instagram.com/decofma/">
-            <i className="pi pi-instagram" style={{'fontSize': '2em'}}></i>
+            <Image  src="insta.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="mailto:andrem.ferraz@hotmail.com">
-            <i className="pi pi-envelope" style={{'fontSize': '2em'}}></i>
+            <Image  src="email.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="https://github.com/decofma">
-            <i className="pi pi-github" style={{'fontSize': '2em'}}></i>
+            <Image  src="github.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="https://linktr.ee/decofma">
-            <i className="pi pi-globe" style={{'fontSize': '2em'}}></i>
+            <Image  src="link.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
           </div> 
         </div>  

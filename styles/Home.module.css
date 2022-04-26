@@ -30,32 +30,55 @@
 }
 .menuStyle{
   align-items:center;
-  padding-top:0px;
   height: 5;
   width: 100%;
   margin: 0%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2.2), 0 6px 20px 0 rgba(0, 0, 0, 1.19);
-  border-radius: 10px;
-  size: 5em;  
+  border-radius: 10px; 
   position: fixed;
   z-index: 1;
-  
 }
 .menuStyle a {  
   justify-content: space-evenly;
   font-size:110%;
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
 }
+
+.imgnavbar {
+  padding-right: 1rem;
+}
+
 .menuStyle:hover,
 .menuStyle:focus,
 .menuStyle:active {
   color: #4527a0;
 }
 
-.bio {
-  color: #221041;
+.imagecontainer {
+  max-width: 1080px;
+  width: 100%;
+  display: block;
   position: relative;
-  right:20em;
-  top: 6em;
+}
+
+.image{
+    max-width: 1080px;   /* Máximo da largura da imagem */
+    width: 100%;
+    max-height: 500px;  /* Máximo da altura da imagem */
+    min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+    background-size:100%;
+    background-repeat: no-repeat;
+    display: contents;
+}
+
+.bio {
+  padding-top: 5rem;
+  text-align: center;
+  width: 100%;
 }
 
 .title a {
@@ -94,7 +117,7 @@
   padding: 0.75rem;
   padding-left: 2rem;  
   padding-right: 2rem;
-  margin-top: 5em;
+  margin-top: 5rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
@@ -112,8 +135,7 @@
 .cardBoard{
   background: #fafafa;
   width: 100%;
-  height:90em;
-  margin-top: 5em;
+  margin-top: 5rem;
   
 }
 
@@ -141,7 +163,7 @@
 
 .card h2 {
   margin: 0 0 1rem;
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
   font-size: 1.5rem;
   color: #221041;
 }
@@ -164,38 +186,34 @@
   padding-left: 29rem;
 }
 
-.logo {
-  box-shadow: 20px 20px 20px 10px rgb(203, 203, 221);
-}
 
 .langform{
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .contact{
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .contactBox{
-  padding-top: 10em;
+  padding-top: 5rem;
   text-align: center;
+  width: 100%;
 }
 
 .contactBox h2{
   color: #221041;
 }
 .contact a{
-  margin: 5em;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
     color: #221041;
 }
-
 
 @media (max-width: 600px) {
   .grid {
@@ -203,3 +221,15 @@
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+    width: auto !important;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+}
+
