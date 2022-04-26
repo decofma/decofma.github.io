@@ -77,9 +77,9 @@ export default function Home() {
         </h1>
         <div id="about"></div>
         <div className={styles.bio}>
-          <code className={styles.code}>
+          <div className={styles.code}>
             I’m a computer engineering student and fullstack developer in process
-          </code>
+          </div>
         </div>
         
         <div className={styles.cardBoard}>
