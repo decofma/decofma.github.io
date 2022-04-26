@@ -42,11 +42,13 @@
   justify-content: space-evenly;
   font-size:110%;
   line-height: 100%;
-  /* display:inline-flex; */
+  display:inline-flex;
   justify-content: center;
   align-items: center;
   padding-right: 1rem;
-  
+}
+.menuContainer{
+  display: flex;
 }
 
 .imgnavbar {
@@ -67,13 +69,13 @@
 }
 
 .image{
-    max-width: 1080px;   /* Máximo da largura da imagem */
-    width: 100%;
-    max-height: 500px;  /* Máximo da altura da imagem */
-    min-height: auto;      /* Mínimo da altura, por padrão “auto” */
-    background-size:100%;
-    background-repeat: no-repeat;
-    display: contents;
+  max-width: 1080px;   /* Máximo da largura da imagem */
+  width: 100%;
+  max-height: 500px;  /* Máximo da altura da imagem */
+  min-height: auto;      /* Mínimo da altura, por padrão “auto” */
+  background-size:100%;
+  background-repeat: no-repeat;
+  display: contents;
 }
 
 .bio {

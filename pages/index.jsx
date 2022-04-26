@@ -14,24 +14,24 @@ export default function Home() {
   const navbar = [
     {
        label:
-       <Link href="#home"><a><spam className={styles.imgnavbar}><Image  src="home.png" alt="React" title="React" width={30} height={30} quality={100}/></spam> Home </a></Link>
+       <Link href="#home"><a><spam className={styles.imgnavbar}><Image  src="home.png" alt="React" title="React" width={20} height={20} quality={100}/></spam> Home </a></Link>
     },
     {
        label:
-       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>About</a></Link>
+       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>About</a></Link>
     },
     {
        label:
-       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>Tech</a></Link>
+       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>Tech</a></Link>
     },
     {
       label:
-      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="React" title="React" width={30} height={30} quality={100} /></spam>Contact</a></Link>
+      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>Contact</a></Link>
     }
    
   ];
   const end = 
-    <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={30} height={30} quality={100} /></a>
+    <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={20} height={20} quality={100} /></a>
   ;
     
   
@@ -47,13 +47,15 @@ export default function Home() {
       </Head>
       
       <div className={styles.menuStyle}>
-        <Menubar model={navbar} end={end} />
+        <div className={styles.menuContainer}>
+          <Menubar model={navbar} end={end} />
+        </div>
       </div>
 
       <main className={styles.main}>
         
         <div name="home" className={styles.imagecontainer}>
-            <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"80px"} quality={100} priority={true}/>
+            <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"70px"} quality={100} priority={true}/>
         </div>
 
         <h1 className={styles.title}>
@@ -86,7 +88,7 @@ export default function Home() {
           <div className={styles.card}>
           <h2> Hi, my name is André Ferraz :)</h2>
           <p>
-            I’m a computer engineering student and started my career at <b>VTEX SMB Group</b> as a marketing intern for 2y. I founded an agency focused on e-commerce where I managed all the processses, people and start developing websites and mobile apps. Later on I worked on the management of IT projects at <b>Banco Bradesco</b> for 2.5y. Nowadays I am a system developer at <b>Wilson, Sons</b> and heading to became a fullstack developer.
+            I’m a computer engineering student and started my career at <b>VTEX SMB Group</b> as a marketing intern for 2y. I founded an agency focused on e-commerce where I managed all the processses, people and start developing websites and mobile apps. Later on I worked on the management of IT projects at <b>Banco Bradesco</b> for 2.5y. Currently I am a system developer at <b>Wilson, Sons</b> and studying fullstack frameworks.
             
           </p>
           
