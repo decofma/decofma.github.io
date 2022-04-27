@@ -14,24 +14,25 @@ export default function Home() {
   const navbar = [
     {
        label:
-       <Link href="#home"><a><spam className={styles.imgnavbar}><Image  src="home.png" alt="React" title="React" width={20} height={20} quality={100}/></spam> Home </a></Link>
+       <Link href="#home"><a><Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100}/></a></Link>
+    },
+    {
+
+       label:
+       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="about" title="about" width={30} height={30} quality={100} /></spam></a></Link>
     },
     {
        label:
-       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>About</a></Link>
-    },
-    {
-       label:
-       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>Tech</a></Link>
+       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="tech" title="tech" width={30} height={30} quality={100} /></spam></a></Link>
     },
     {
       label:
-      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="React" title="React" width={20} height={20} quality={100} /></spam>Contact</a></Link>
+      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="contact" title="contact" width={30} height={30} quality={100} /></spam></a></Link>
     }
    
   ];
   const end = 
-    <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={20} height={20} quality={100} /></a>
+    <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={30} height={30} quality={100} /></a>
   ;
     
   
@@ -48,14 +49,14 @@ export default function Home() {
       
       <div className={styles.menuStyle}>
         <div className={styles.menuContainer}>
-          <Menubar model={navbar} end={end} />
+          <Menubar model={navbar} end={end} className={styles.menubar}/>
         </div>
       </div>
 
       <main className={styles.main}>
         
         <div name="home" className={styles.imagecontainer}>
-            <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"70px"} quality={100} priority={true}/>
+            <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"65px"} quality={100} priority={true}/>
         </div>
 
         <h1 className={styles.title}>
