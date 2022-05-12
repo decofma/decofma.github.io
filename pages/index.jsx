@@ -14,20 +14,20 @@ export default function Home() {
   const navbar = [
     {
        label: 
-       <Link href="#home"><a><Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100}/></a></Link>
+       <Link href="#homeSection"><a><Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100}/></a></Link>
     },
     {
 
        label:
-       <Link href="#about"><a><span className={styles.imgnavbar}><Image  src="user.png" alt="about" title="about" width={30} height={30} quality={100} /></span></a></Link>
+       <Link href="#aboutSection"><a><span className={styles.imgnavbar}><Image  src="user.png" alt="about" title="about" width={30} height={30} quality={100} /></span></a></Link>
     },
     {
        label:
-       <Link href="#tech"><a><span className={styles.imgnavbar}><Image  src="coding.png" alt="tech" title="tech" width={30} height={30} quality={100} /></span></a></Link>
+       <Link href="#techSection"><a><span className={styles.imgnavbar}><Image  src="coding.png" alt="tech" title="tech" width={30} height={30} quality={100} /></span></a></Link>
     },
     {
       label:
-      <Link href="#contact"><a><span className={styles.imgnavbar}><Image  src="contact.png" alt="contact" title="contact" width={30} height={30} quality={100} /></span></a></Link>
+      <Link href="#contactSection"><a><span className={styles.imgnavbar}><Image  src="contact.png" alt="contact" title="contact" width={30} height={30} quality={100} /></span></a></Link>
     }
    
   ];
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="contact"/>
+        <div id="contactSection"/>
         <div  className={styles.contactBox}>
           <h2>Where to find me 🙋🏻‍♂️</h2> 
           <div className={styles.contact}>
