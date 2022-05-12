@@ -262,6 +262,9 @@
   .cardBoard{
     padding: 2rem;
   }
+  .p-menuitem{
+    padding-left: 50rem !important;
+  }
 }
 @media screen and (max-width: 600px) {
   .grid {
