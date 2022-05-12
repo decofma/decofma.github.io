@@ -19,15 +19,15 @@ export default function Home() {
     {
 
        label:
-       <Link href="#about"><a><spam className={styles.imgnavbar}><Image  src="user.png" alt="about" title="about" width={30} height={30} quality={100} /></spam></a></Link>
+       <Link href="#about"><a><span className={styles.imgnavbar}><Image  src="user.png" alt="about" title="about" width={30} height={30} quality={100} /></span></a></Link>
     },
     {
        label:
-       <Link href="#tech"><a><spam className={styles.imgnavbar}><Image  src="coding.png" alt="tech" title="tech" width={30} height={30} quality={100} /></spam></a></Link>
+       <Link href="#tech"><a><span className={styles.imgnavbar}><Image  src="coding.png" alt="tech" title="tech" width={30} height={30} quality={100} /></span></a></Link>
     },
     {
       label:
-      <Link href="#contact"><a><spam className={styles.imgnavbar}><Image  src="contact.png" alt="contact" title="contact" width={30} height={30} quality={100} /></spam></a></Link>
+      <Link href="#contact"><a><span className={styles.imgnavbar}><Image  src="contact.png" alt="contact" title="contact" width={30} height={30} quality={100} /></span></a></Link>
     }
    
   ];
@@ -131,7 +131,7 @@ export default function Home() {
             <Image  src="email.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="https://github.com/decofma">
-            <Image  src="github.png" alt="React" title="React" width={50} height={50} quality={100} />
+            <Image  src="github_2.png" alt="React" title="React" width={50} height={50} quality={100} />
             </a>
             <a href="https://linktr.ee/decofma">
             <Image  src="link.png" alt="React" title="React" width={50} height={50} quality={100} />
