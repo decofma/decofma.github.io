@@ -14,7 +14,7 @@ export default function Home() {
   const navbar = [
     {
        label: 
-       <Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100} />
+       <Link href="#home"><a><Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100}/></a></Link>
     },
     {
 
