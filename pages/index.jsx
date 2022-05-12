@@ -13,8 +13,8 @@ import Typewriter from 'typewriter-effect';
 export default function Home() {
   const navbar = [
     {
-       label:
-       <Link href="#home"><a><Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100}/></a></Link>
+       label: 
+       <Image  src="home.png" alt="home" title="home" width={30} height={30} quality={100} />
     },
     {
 
@@ -33,7 +33,7 @@ export default function Home() {
   ];
   const end = 
     <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={30} height={30} quality={100} /></a>
-  ;
+  
     
   
 
@@ -55,7 +55,7 @@ export default function Home() {
 
       <main className={styles.main}>
         
-        <div name="home" className={styles.imagecontainer}>
+        <div id="homeSection" className={styles.imagecontainer}>
             <Image  className={styles.image} src="me.png" alt="yep, that's me" layout={"responsive"} width="100%" height={"65px"} quality={100} priority={true}/>
         </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
             typewriter.typeString("Welcome to my portfolio.")
           }}/>
         </h1>
-        <div id="about"></div>
+        <div id="aboutSection"></div>
         <div className={styles.bio}>
           <div className={styles.code}>
             I’m a computer engineering student and fullstack developer in process
@@ -95,7 +95,7 @@ export default function Home() {
           
             
           </div>
-          <div id="tech" className={styles.tech}></div>
+          <div id="techSection" className={styles.tech}></div>
           <div className={styles.card}> 
             <h2> Technologies that I work with </h2>
             <div className={styles.langform}>            
