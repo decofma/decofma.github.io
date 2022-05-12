@@ -33,9 +33,7 @@ export default function Home() {
   ];
   const end = 
     <a href='https://github.com/decofma'><Image  src="github.png" alt="React" title="React" width={30} height={30} quality={100} /></a>
-  
     
-  
 
   return (
     <>

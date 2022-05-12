@@ -217,15 +217,24 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
     color: #221041;
 }
+.menubar > a[class="p-menubar-button"] {
+  content:url('https://res.cloudinary.com/decofma/image/upload/v1652391181/barra-de-menu.png') !important;
+  background:url('https://res.cloudinary.com/decofma/image/upload/v1652391181/barra-de-menu.png') no-repeat !important;
+  background-size: 1.8rem !important;
+  background-position-x: center !important;
+  background-position-y: center !important;
+}
+
 
 @media screen and (max-width: 960px) {
-  .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+  .p-menubar .p-menubar-mobile-active .p-menubar-root-list {
     width: auto !important;
     display: flex;
     flex-direction: column;
     top: 100%;
     left: 0;
     z-index: 1;
+    
   }
 
   .title {
