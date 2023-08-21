@@ -60,19 +60,18 @@ export default function Home() {
         <h1 className={styles.title}>
           <Typewriter 
             onInit={(typewriter) => {
-            typewriter.typeString("Hello World! I'm André :)")
-            .delay(75)
+            typewriter.typeString("Hello World! I'm André Ferraz:)")
+            .delay(25)
             .pauseFor(2500)
             .deleteAll()
-            .callFunction(() => {
-              console.log('All strings were deleted');
-            })
+            
             .start();
             typewriter.typeString("Scroll down to get to know me ⬇")
             .delay(75)
             .pauseFor(2500)
             .deleteAll()
             typewriter.typeString("Welcome to my portfolio.")
+            .delay(75)
           }}/>
         </h1>
         <div id="aboutSection"></div>
