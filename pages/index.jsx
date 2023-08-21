@@ -61,9 +61,7 @@ export default function Home() {
           <Typewriter 
             onInit={(typewriter) => {
             typewriter.typeString("Hello World! I'm André :)")
-            .callFunction(() => {
-              console.log('String typed out!');
-            })
+            .delay(75)
             .pauseFor(2500)
             .deleteAll()
             .callFunction(() => {
@@ -71,6 +69,7 @@ export default function Home() {
             })
             .start();
             typewriter.typeString("Scroll down to get to know me ⬇")
+            .delay(75)
             .pauseFor(2500)
             .deleteAll()
             typewriter.typeString("Welcome to my portfolio.")
