@@ -60,24 +60,21 @@ export default function Home() {
         <h1 className={styles.title}>
           <Typewriter 
             onInit={(typewriter) => {
+            typewriter.changeDelay(50)
             typewriter.typeString("Hello World! I'm André :)")
-            .delay(25)
             .pauseFor(2500)
-            .deleteAll()
-            
-            .start();
+            .deleteAll()            
+            .start()
             typewriter.typeString("Scroll down to get to know me ⬇")
-            .delay(75)
             .pauseFor(2500)
             .deleteAll()
             typewriter.typeString("Welcome to my portfolio.")
-            .delay(75)
           }}/>
         </h1>
         <div id="aboutSection"></div>
         <div className={styles.bio}>
           <div className={styles.code}>
-            I’m a computer engineering student and fullstack developer in process
+            I’m a computer engineer and fullstack developer at @WilsonSons
           </div>
         </div>
         
@@ -85,8 +82,8 @@ export default function Home() {
           <div className={styles.card}>
           <h2> Hi, my name is André Ferraz :)</h2>
           <p>
-            I’m a computer engineering student and started my career at <b>VTEX SMB Group</b> as a marketing intern for 2y. I founded an agency focused on e-commerce where I managed all the processses, people and start developing websites and mobile apps. Later on I worked on the management of IT projects at <b>Banco Bradesco</b> for 2.5y. Currently I am a system developer at <b>Wilson, Sons</b> and studying fullstack frameworks.
-            
+          Im a fullstack developer currently working as a systems analyst at <b>Wilson Sons </b>. In a nutshell, im responsible for developing solutions like web-apps and apis for the entire company from a solid backend to beautiful and functional frontend. I also worked at <b>Vtex</b> and had my Vtex IO certification to build fluid responsibles e-commerces and <b>Banco Bradesco</b> where i had the experience to focus on IT project management. 
+
           </p>
           
             
