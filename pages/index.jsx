@@ -60,7 +60,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <Typewriter 
             onInit={(typewriter) => {
-            typewriter.typeString("Hello World! I'm André Ferraz:)")
+            typewriter.typeString("Hello World! I'm André :)")
             .delay(25)
             .pauseFor(2500)
             .deleteAll()
