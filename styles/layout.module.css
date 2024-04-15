@@ -27,6 +27,28 @@
 .menubar div{
     margin-left: auto;
 }
-.menubar div > a > img{
-    filter:brightness(0);
-}
+
+@media (max-width: 700px) {
+    .menubar{
+        padding: 1rem;
+        border-radius: 0;
+        border: none;
+        background-color:rgb(255, 255, 255);
+        box-shadow: 0 10px 100px rgba(0,0,0,0.1);
+        position: fixed;
+        width: -webkit-fill-available;
+        z-index: 2;
+    }
+    .menubar [class="p-menuitem-text"]{
+        font-size: 1rem;
+        margin: 0.5rem;
+      }
+    .menubar [class="p-menubar-button"]{
+        padding-inline: 0rem;
+        background-color: black;
+    }
+    .menubar [class="p-menubar-root-list"]{
+        background-color: rgb(218, 218, 218)
+    }
+  
+  }
