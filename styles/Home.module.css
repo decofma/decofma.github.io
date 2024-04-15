@@ -308,6 +308,16 @@
     grid-template-columns: 20rem;
     grid-template-rows: 20rem;
   }
+  .projectTextContainer {
+    position: relative;
+    top: -13rem;
+    left: 2.5rem;
+    width: 25rem;
+    font-size: 1rem;
+  }
+  .projectText {
+    width: 50%;
+  }
 }
 
 /* Tablet and Smaller Desktop */
