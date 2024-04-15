@@ -244,7 +244,70 @@
   .content {
     padding: 4rem;
   }
+  .divider{
+    width: 30%; /* extends across the entire width of the page */
+  }
+  .imagecontainer {
+    margin-top: 6rem;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .code {
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right:0;  
+  }
+  .bio {
+    font-size: 1rem;
+    margin: 0;
 
+  }
+
+  .cardContainer{
+    background: #e7e7e7;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .card {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
+  .card h2 {
+    font-size: 2rem;
+  }
+  .card p {
+    font-size: 1.2rem;
+  }
+
+  .techGrid{
+    justify-content: center;
+    grid-template-columns: 7rem 7rem 7rem;
+    grid-template-rows: 8rem;
+    justify-items: center;
+    align-items: center;
+  }
+  .techCard{
+    width: 6rem;
+    height: 6rem;
+  }
+  .techCard img{
+    width: 2rem;
+  }
+  .techCard p{
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+
+  .projectsGrid{
+    grid-template-columns: 20rem;
+    grid-template-rows: 20rem;
+  }
 }
 
 /* Tablet and Smaller Desktop */
