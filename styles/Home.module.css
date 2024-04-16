@@ -20,6 +20,9 @@
   margin: 2.5rem;  
   font-size: 3rem;
   color: #444444;
+  width: 70%;
+  height: 4rem;
+  text-align: center;
 }
 
 .bio {
