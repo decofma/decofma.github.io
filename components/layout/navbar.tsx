@@ -5,13 +5,19 @@ import { Menubar } from 'primereact/menubar';
 import { useRouter } from "next/router";
 import "primereact/resources/themes/lara-dark-purple/theme.css";  
 import "primereact/resources/themes/md-dark-deeppurple/theme.css";
-
+import { SelectButton } from 'primereact/selectbutton';
+import { useEffect, useState } from "react";
 
 interface LayoutProps {
-   children:React.ReactNode
-}
-function Navbar({children}: LayoutProps){
-const router = useRouter();
+   children: React.ReactNode;
+   selectedLanguage: string;
+   setSelectedLanguage: (language: string) => void;
+ }
+
+function Navbar({children, selectedLanguage, setSelectedLanguage}: LayoutProps){
+   const router = useRouter();
+   const options = ['ENG', 'PT'];
+   const [value, setValue] = useState(options[0]);
 
 const items = [
    {
@@ -43,8 +49,9 @@ const items = [
   
  ];
  const end = 
-   <a href="https://github.com/decofma" target="_blank"><Image  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Github" width={30} height={30} quality={100} /></a>
-
+   // <a href="https://github.com/decofma" target="_blank"><Image  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Github" width={30} height={30} quality={100} /></a>
+   <SelectButton value={value} onChange={(e) => { setValue(e.value); setSelectedLanguage(e.value); }} options={options} allowEmpty={false}/>
+  
  return (
    <>
       <Head>

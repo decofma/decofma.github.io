@@ -14,11 +14,17 @@
 .menubar a{
     padding-inline: 2rem;
 }
-
 .menubar span:hover{
     color: #7843E9;
 }
-
+.menubar [class="p-button-label p-c"]{
+    color: #e7e7e7;
+}
+.menubar [class="p-button p-component p-highlight"],
+.menubar [class="p-button p-component p-highlight p-focus"]
+{
+    background-color: #7843E9;
+}
 .menubar span{
     color: black;
     font-weight: bold;
