@@ -129,15 +129,6 @@
   color: #444444;
   font-size: 3rem;
 }
-.projectsContainer h3{
-  color: #444444;
-  font-size: 2.5rem;
-  margin: 2rem
-}
-.projectsContainer p{
-  color: #444444;
-  font-size: 1.5rem;
-}
 .projectsGrid {
   display: grid;
   grid-template-rows: 25rem 25rem 25rem 25rem;
@@ -145,11 +136,24 @@
 }
 .projectCard{
   display: grid;
-  grid-template-columns: 30rem 30rem;
+  grid-template-columns: 40% 40%;
   grid-template-rows: 25rem;
   justify-content: center;
   justify-items: center;
   text-align: justify;
+}
+.projectTextContainer{
+  align-content: center;
+}
+.projectTextContainer h3{
+  color: #444444;
+  font-size: 2.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+.projectTextContainer p{
+  color: #444444;
+  font-size: 1.5rem;
 }
 .projectIcons{
   display: grid;
@@ -252,6 +256,9 @@
   }
   .imagecontainer {
     margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .title {
     font-size: 2rem;
@@ -259,14 +266,12 @@
   }
   .code {
     font-size: 1rem;
-    padding-left: 0;
-    padding-right:0;  
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .bioContainer {
     font-size: 1rem;
-
   }
-
   .cardContainer{
     background: #e7e7e7;
     width: 100%;
@@ -305,20 +310,33 @@
     font-size: 0.8rem;
     font-weight: lighter;
   }
-
+  .projectsContainer p{
+    font-size: 1.2rem;
+  }
   .projectsGrid{
-    grid-template-columns: 20rem;
-    grid-template-rows: 20rem;
+    grid-template-columns: 30rem;
+    grid-template-rows: 25rem;
+    justify-content: center;
+    grid-row-gap: 5rem;
   }
-  .projectTextContainer {
-    position: relative;
-    top: -13rem;
-    left: 2.5rem;
-    width: 25rem;
-    font-size: 1rem;
+  .projectCard{
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-template-rows: 25rem;
   }
-  .projectText {
-    width: 50%;
+  .projectTextContainer{
+    align-content: center;
+  }
+  .projectTextContainer h3{
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  .projectImages{
+    display: grid;
+    grid-template-columns: 15rem;
+    justify-items: center;
+    padding: 1rem;
   }
 }
 

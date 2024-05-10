@@ -20,6 +20,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
   const ChatBotText = selectedLanguage === 'ENG' ? C.EngProjectChatbot : C.PortProjectChatbot;
   const TicTacToeText = selectedLanguage === 'ENG' ? C.EngProjectVelha : C.PortProjectVelha;
   const TicTacToeTitle = selectedLanguage === 'ENG' ? C.EngTicTacTitle : C.PortTicTacTitle;
+  const ChatText = selectedLanguage === 'ENG' ? C.EngProjectCha : C.PortProjectCha
   const Contact = selectedLanguage === 'ENG' ? C.EngContactTitle : C.PortContactTitle;
 
   function redirectToSite(site: string): void {
@@ -46,7 +47,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
             }}
           />
         </h1>
-        
+
         <div id="aboutSection"/>
         <div className={styles.bioContainer}>
           <div className={styles.code}> 
@@ -144,7 +145,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
                 <p className={styles.projectText}> {ChatBotText} </p>
               </div>
               <div className={styles.projectImages}>
-                <Image className={styles.projectImage} src="/adocat-mobile.png" alt="adocat mockup" width={400} height={400} quality={100} />
+                <Image className={styles.projectImage} src="/chatbot-mobile.png" alt="chatbot mockup" width={400} height={400} quality={100} />
                 <div className={styles.projectIcons}>
                   <Image className={styles.projectIcon} onClick={() => redirectToSite(C.GitBot)} src="/codigo-fonte.png" alt="codigo mockup" width={50} height={50} quality={100} />
                 </div>
@@ -160,7 +161,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
               </div>              
               <div className={styles.projectTextContainer}>
                 <h3> Rachel&André </h3>
-                <p className={styles.projectText}> {TicTacToeText} </p>
+                <p className={styles.projectText}> {ChatText} </p>
               </div>
             </div>            
                                     

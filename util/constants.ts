@@ -15,8 +15,9 @@ export class C {
     static readonly EngTechTitle = 'TECHS';
     static readonly EngProjectTitle = 'PROJECTS';
     static readonly EngProjectAdocat = 'Final Paper project in which an application for cat adoption was developed to simplify the comunication between ONGs and future adopters, using React Native, Prisma, PostgreSQL, Render and SQLite technologies.';
-    static readonly EngProjectChatbot = 'OpenAI study project focused on building a WhatsApp Chatbot using Typescript.';
+    static readonly EngProjectChatbot = 'WhatsApp chatbot application developed using the OpenAI 3.5 Turbo API, allowing users to interact with your user as if it were a chatbot, offering a convenient and user-friendly way for individuals to access the benefits of AI-powered chatbots directly through WhatsApp.';
     static readonly EngProjectVelha = 'AI study project to develop a smart move and risk calculator bot on a tic tac toe game using React and Typescript.';
+    static readonly EngProjectCha= 'A wedding gift registry website developed using React, Next.js, and TypeScript with Mercado Pago and Pix payment gateways integration to ensure seamless transactions. The platform allows to manage gift lists, while guests can easily browse and purchase items online.';
     static readonly EngContactTitle ='WHERE TO FIND ME';
     static readonly EngTicTacTitle ='Tic Tac Toe';
     static readonly PortLine = ' Eu sou engenheiro de software e desenvolvedor fullstack @ WilsonSons';
@@ -25,8 +26,9 @@ export class C {
     static readonly PortTechTitle = 'TECNOLOGIAS';
     static readonly PortProjectTitle = 'PROJETOS';
     static readonly PortProjectAdocat = 'Projeto de Monografia onde foi desenvolvido uma aplicação para adoção de gatos, com objetivo de simplificar a comunicação entre ONGs e futuros adotantes. Foi utilizando React Native, Prisma, PostgreSQL, Render e SQLite.';
-    static readonly PortProjectChatbot = 'Chatbot desenvolvido para o WhatsApp utlizando Typescript, com objeto de estudar sobre a API da OpenIA';
+    static readonly PortProjectChatbot = 'Aplicação de chatbot para o WhatsApp desenvolvida utilizando a API OpenAI 3.5 Turbo, permitindo que os usuários interajam com seu usuário como se fosse um chatbot, oferecendo uma maneira conveniente e amigável para os indivíduos acessarem os benefícios dos chatbots alimentados por IA diretamente através do WhatsApp.';
     static readonly PortProjectVelha = 'Projeto de estudo sobre IA para calcular o melhor movimento e leitura de riscos em um jogo da velha usando React e Typescript.';
+    static readonly PortProjectCha = 'Webapp de lista de presentes para casamento desenvolvido utilizando React, Next.js e TypeScript e com integração com os gateways de pagamento do Mercado Pago e Pix. A aplicação permite gerenciar listas de presentes, enquanto os convidados podem navegar e comprar itens online.';
     static readonly PortContactTitle ='ONDE ME ENCONTRAR';
     static readonly PortTicTacTitle ='Jogo da Velha';
 
