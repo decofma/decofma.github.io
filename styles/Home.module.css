@@ -251,9 +251,6 @@
   .content {
     padding: 4rem;
   }
-  .imagecontainer{
-    margin-top: 0;
-  }
   .image{
     height: 80%;
   }
@@ -261,7 +258,6 @@
     width: 30%; /* extends across the entire width of the page */
   }
   .imagecontainer {
-    margin-top: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
