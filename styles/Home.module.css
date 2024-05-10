@@ -140,8 +140,7 @@
 }
 .projectsGrid {
   display: grid;
-  grid-template-rows: 25rem 25rem 25rem;
-  margin: 2rem;
+  grid-template-rows: 25rem 25rem 25rem 25rem;
   justify-items: center;
 }
 .projectCard{
