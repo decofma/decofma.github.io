@@ -9,6 +9,7 @@
 .imagecontainer {
   max-width: 1080px;
   width: 100%;
+  height: 40rem;
 }
 .image{
   width: 100%;
@@ -50,7 +51,7 @@
   padding: 2rem;
 }
 .card {
-  padding: 3rem;
+  padding: 2rem;
   margin: 2rem;
   max-width: 70%;
   margin-left: auto;
@@ -58,7 +59,6 @@
   text-align: -webkit-center;
 }
 .card h2 {
-  margin: 2rem;
   font-size: 3rem;
   color: #444444;
   text-align: center;
@@ -129,58 +129,60 @@
 .projectsContainer h2{
   color: #444444;
   font-size: 3rem;
+}
+.projectsContainer h3{
+  color: #444444;
+  font-size: 2.5rem;
   margin: 2rem
+}
+.projectsContainer p{
+  color: #444444;
+  font-size: 1.5rem;
 }
 .projectsGrid {
   display: grid;
-  grid-template-columns: 40rem 40rem;
-  grid-template-rows: 20rem 20rem;
+  grid-template-rows: 25rem 25rem 25rem;
   margin: 2rem;
+  justify-items: center;
+}
+.projectCard{
+  display: grid;
+  grid-template-columns: 30rem 30rem;
+  grid-template-rows: 25rem;
   justify-content: center;
- 
+  justify-items: center;
+  text-align: justify;
 }
-.project{
-  padding: 2rem;
-}
-.project img{
-  width: 100%;
-  height: auto;
-  border-style: solid;
-  border-color: #7843E9;
-  border-radius: 50px;
-  border-width: 5px;
-
-}
-.project:hover img{
-  filter: blur(5px);
-}
-.project:hover .projectTextContainer {
-  display: block;
-}
-.projectTextContainer {
+.projectIcons{
+  display: grid;
+  grid-template-rows: 7rem 7rem;
+  grid-template-columns: 10rem;
   position: relative;
-  top: -30rem;
-  left: 5rem;
-  width: 55rem;
-  filter: drop-shadow(2px 2px 3px rgb(22, 22, 22));
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f9f9f9;
-  display: none;
+  bottom: 20rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
-.projectText {
-  width: 50%;
+.projectImages:hover .projectImage{
+  animation: blur-in 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530)both;
+}
+.projectImages :hover .projectIcon{
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  cursor: pointer;
+}
+.projectImages :not(:hover) .projectIcon{
+  animation: fade-out-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.contactBox{
-  margin: 2rem;
+.contactContainer{
   text-align: center;
   width: 100%;
+  margin: 2rem;
+  padding: 2rem;
 }
 .contactBox h2{
   color: #444444;
   font-size: 3rem;
-  margin: 2rem
 }
 .contact{
   display: flex;
@@ -262,9 +264,8 @@
     padding-left: 0;
     padding-right:0;  
   }
-  .bio {
+  .bioContainer {
     font-size: 1rem;
-    margin: 0;
 
   }
 
@@ -340,11 +341,38 @@
   }
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
   }
-  to {
-    transform: rotate(0deg);
+  100% {
+    transform: translateY(0);
   }
 }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+@keyframes blur-in {
+  0% {
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(5px);
+  }
+}
+
