@@ -251,6 +251,12 @@
   .content {
     padding: 4rem;
   }
+  .imagecontainer{
+    margin-top: 0;
+  }
+  .image{
+    height: 80%;
+  }
   .divider{
     width: 30%; /* extends across the entire width of the page */
   }
