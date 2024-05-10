@@ -7,14 +7,13 @@
 }
 
 .imagecontainer {
-  max-width: 1080px;
   width: 100%;
   height: 42rem;
+  text-align-last: center;
 }
 .image{
-  width: 100%;
+  width: auto;
   height: 100%;
-  
 }
 
 .title {
