@@ -1,18 +1,18 @@
 export class C {
     static readonly EngType = { 
     string1: 'Hello World! I`m André :)', 
-    string2: 'Scroll down to get to know me ⬇', 
+    string2: 'Scroll down to get to know me.', 
     string3: 'Welcome to my portfolio.' 
     }
     static readonly PortType = { 
         string1: 'Olá, Mundo! Eu sou o André :)', 
-        string2: 'Arraste pra baixo para me conhecer melhor ⬇', 
+        string2: 'Arraste pra baixo para me conhecer melhor.', 
         string3: 'Bem vind@ ao meu portifólio.'
     }
-    static readonly EngLine = 'I`m a software engineer and fullstack developer @ WilsonSons';
+    static readonly EngLine = 'I`m a computer engineer and full stack developer @ Wilson Sons, based in Brazil';
     static readonly EngBioTitle = 'ABOUT ME';
-    static readonly EngBioText = 'As the header says, Im a software engineer and full stack systems analyst at Wilson Sons. Im responsible for developing web-apps solutions and APIs for the entire company, from a solid backend to a functional UX driven frontend. I also worked at Vtex and obtained my Vtex IO certification to develop fluid, functional and responsive e-commerce solutions. Moreover, I got the hang of Agile methodologies like Kanban and Scrum and gained valuable experience managing IT projects during my time at Banco Bradesco.';
-    static readonly EngTechTitle = 'TECHS';
+    static readonly EngBioText = 'Hi, My name is André Ferraz, based in Rio de Janeiro and I am passionate about nature, music, and sports. I hold a degree in computer engineering and am currently pursuing a postgraduate course in full stack development. I work as a full stack developer at Wilson Sons, where I’m responsible for creating web solutions and developing APIs. I also have strong experience in project management and a deep understanding of agile methodologies like Kanban and Scrum, gained during my time managing projects at Banco Bradesco.';
+    static readonly EngTechTitle = 'HARD SKILLS';
     static readonly EngProjectTitle = 'PROJECTS';
     static readonly EngProjectAdocat = 'Final Paper project in which an application for cat adoption was developed to simplify the comunication between ONGs and future adopters, using React Native, Prisma, PostgreSQL, Render and SQLite technologies.';
     static readonly EngProjectChatbot = 'WhatsApp chatbot application developed using the OpenAI 3.5 Turbo API, allowing users to interact with your user as if it were a chatbot, offering a convenient and user-friendly way for individuals to access the benefits of AI-powered chatbots directly through WhatsApp.';
@@ -20,9 +20,10 @@ export class C {
     static readonly EngProjectCha= 'A wedding gift registry website developed using React, Next.js, and TypeScript with Mercado Pago and Pix payment gateways integration to ensure seamless transactions. The platform allows to manage gift lists, while guests can easily browse and purchase items online.';
     static readonly EngContactTitle ='WHERE TO FIND ME';
     static readonly EngTicTacTitle ='Tic Tac Toe';
-    static readonly PortLine = ' Eu sou engenheiro de software e desenvolvedor fullstack @ WilsonSons';
+
+    static readonly PortLine = 'Engenheiro da computação e desenvolvedor full stack @ WilsonSons';
     static readonly PortBioTitle = 'SOBRE MIM';
-    static readonly PortBioText =   'Como fala ali acima, sou engenheiro de software e analista de sistemas full stack na Wilson Sons. Sou responsável por desenvolver soluções de web-apps e APIs para toda a empresa, desde um backend sólido até um frontend funcional orientado para UX. Além disso, trabalhei na Vtex e obtive minha certificação Vtex IO para desenvolver soluções de e-commerce fluidas, funcionais e responsivas. Além disso, me familiarizei com metodologias ágeis como Kanban e Scrum e adquiri uma valiosa experiência na gestão de projetos de TI durante meu tempo no Banco Bradesco.';
+    static readonly PortBioText =   'Olá, sou André Ferraz, residente no Rio de Janeiro e apaixonado por natureza, música e esportes. Sou engenheiro de computação e estou cursando pós-graduação em desenvolvimento full stack. Atualmente, atuo como desenvolvedor full stack na Wilson Sons, sendo responsável pela criação de soluções web e desenvolvimento de APIs. Também tenho sólida experiência em gestão de projetos e amplo conhecimento em metodologias ágeis, como Kanban e Scrum, adquiridos durante meu trabalho na gestão de projetos no Banco Bradesco.';
     static readonly PortTechTitle = 'TECNOLOGIAS';
     static readonly PortProjectTitle = 'PROJETOS';
     static readonly PortProjectAdocat = 'Projeto de Monografia onde foi desenvolvido uma aplicação para adoção de gatos, com objetivo de simplificar a comunicação entre ONGs e futuros adotantes. Foi utilizando React Native, Prisma, PostgreSQL, Render e SQLite.';

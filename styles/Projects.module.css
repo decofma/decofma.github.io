@@ -1,0 +1,120 @@
+.card {
+    padding: 2rem;
+    margin: 2rem;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: -webkit-center;
+  }
+  .card h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .card p {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .card b{
+    color: #7843E9;
+  }
+  .divider{
+    width: 3%; /* extends across the entire width of the page */
+    height: 7px; /* sets the height of the line */
+    background-color: #7843E9;
+    border-radius: 30px;
+    align-self: center;
+    margin: 2rem;
+    filter: opacity(0.5);
+    }
+  
+  .projectsContainer{
+    width: 100%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  .projectsContainer h2{
+    font-size: 3rem;
+  }
+  .projectsGrid {
+    display: grid;
+    grid-template-rows: 25rem 25rem 25rem 25rem;
+    justify-items: center;
+  }
+  .projectCard{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 25rem;
+    justify-content: center;
+    justify-items: center;
+    text-align: justify;
+  }
+  .projectTextContainer{
+    align-content: center;
+  }
+  .projectTextContainer h3{
+    font-size: 2.5rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  .projectTextContainer p{
+    font-size: 1.5rem;
+  }
+  .projectIcons{
+    display: grid;
+    grid-template-rows: 7rem 7rem;
+    grid-template-columns: 10rem;
+    position: relative;
+    bottom: 20rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectImages:hover .projectImage{
+    animation: blur-in 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530)both;
+  }
+  .projectImages :hover .projectIcon{
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    cursor: pointer;
+  }
+  .projectImages :not(:hover) .projectIcon{
+    animation: fade-out-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-top {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out-bottom {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+  @keyframes blur-in {
+    0% {
+      filter: blur(0);
+    }
+    100% {
+      filter: blur(5px);
+    }
+  }
+  
+  

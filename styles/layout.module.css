@@ -1,4 +1,145 @@
-.menubar{
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+  z-index: 100;
+  opacity: 90%;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+}
+
+.navItem {
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navItem:hover {
+  color: #b37ff7; /* Cor de hover */
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccc;
+  border-radius: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+input:checked + .slider {
+  background-color: #8F43EE;
+}
+
+/* Bolinha deslizante */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%) translateX(0); /* Adiciona translateX */
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/sun.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 200ms, transform 0.4s; /* Transição para opacidade e deslocamento */
+  opacity: 1;
+}
+
+/* Imagem da Lua */
+.iconMoon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%) translateX(0); /* Adiciona translateX */
+  width: 24px;
+  height: 24px;
+  background-image: url('/icons/moon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: opacity 200ms, transform 0.4s; /* Transição para opacidade e deslocamento */
+  opacity: 0;
+}
+
+/* Quando o input estiver "checked" (dark mode ativo) */
+input:checked + .slider .icon {
+  opacity: 0;
+  transform: translateY(-50%) translateX(20px); /* Desloca o sol para a esquerda */
+}
+
+input:checked + .slider .iconMoon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(20px); /* Desloca a lua para a direita */
+}
+
+.switchers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.languageButton {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.languageButton:hover {
+  background-color: #b37ff7;
+  color: #413543;
+}
+
+.active {
+  background-color: #8F43EE;
+  color: white;
+}
+
+
+/* .menubar{
     padding: 1rem;
     padding-inline-start: 5rem;
     padding-inline-end: 5rem;
@@ -57,4 +198,4 @@
         background-color: rgb(218, 218, 218)
     }
   
-  }
+  } */
