@@ -21,13 +21,11 @@ export default function Home({ selectedLanguage }: HomeProps) {
   const BioLine = selectedLanguage === 'ENG' ? C.EngLine : C.PortLine;
   const BioTitle = selectedLanguage === 'ENG' ? C.EngBioTitle : C.PortBioTitle;
   const BioText = selectedLanguage === 'ENG' ? C.EngBioText : C.PortBioText;
-  
+  const { theme } = useTheme();
   const handleDownload = () => {
     const fileToDownload = selectedLanguage === 'ENG'
       ? '/archives/andre-ferraz-resume.pdf'
       : '/archives/andre-ferraz-curriculo.pdf';
-
-    // Redireciona para o arquivo para download
     router.push(fileToDownload);
   };
 
@@ -58,7 +56,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
             {BioLine}
           </div> 
           <div className={styles.bioIcons} 
-          // style={{ filter: isDarkTheme ? 'invert(1)' : 'none' }}
+          style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}
           >
             <Link href="https://www.linkedin.com/in/andreamferraz/" target="_blank" rel="noopener noreferrer">
               <Image src={'/icons/linkedin.png'} width={25} height={25} alt="LinkedIn" />
@@ -72,7 +70,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
           </div>
           <div className={styles.buttonContainer}>
             <button className={styles.bioButton} onClick={handleDownload}>
-              Baixar Currículo
+              { selectedLanguage === 'ENG' ? 'See Resume' : 'Ver Currículo'}
             </button>
           </div>
         </div>
@@ -97,7 +95,7 @@ export default function Home({ selectedLanguage }: HomeProps) {
       </main>
       <footer className={styles.footer}>
         <p>
-        Handcrafted using React, Next.js and 💜 by me.          
+        Handcrafted using React, Next.js and <span>💜</span> by me.          
         </p>  
       </footer>
     </div>

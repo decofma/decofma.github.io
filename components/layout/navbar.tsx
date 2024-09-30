@@ -3,6 +3,8 @@ import layout from "@/styles/layout.module.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useTheme } from "@/context/ThemeContext";
+
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -14,7 +16,7 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
   const router = useRouter();
   const options = ['ENG', 'PT'];
   const [language, setLanguage] = useState(selectedLanguage);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const { theme, toggleTheme } = useTheme();
 
 
   const handleNavigation = (sectionId: string) => {
@@ -24,21 +26,6 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
   const handleLanguageChange = (newLanguage: string) => {
     setLanguage(newLanguage);
     setSelectedLanguage(newLanguage);
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.body.className = savedTheme; // Define a classe no body para o tema
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); // Salva o tema no localStorage
-    document.body.className = newTheme; // Aplica a classe no body
   };
 
   return (
@@ -74,7 +61,7 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
           <input
             type="checkbox"
             checked={theme === 'dark'}
-            onChange={toggleTheme}
+              onChange={toggleTheme}
           />
           <span className={layout.slider}>
             <span className={layout.icon}></span>

@@ -92,6 +92,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  background-color: #7843E9;
 }
 
 .code {
@@ -146,13 +147,17 @@
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
-  color: #fafafa;
 }
 .footer p {
   display: flex;
   justify-content: center;
-  align-items: flex;
+  align-items: center;
   flex-grow: 1;
+}
+.footer span{
+  padding-inline: 0.25rem;
+  transition: opacity 200ms, transform 0.4s;
+  animation: pulse 1.5s ease-in-out infinite both;
 }
 
 .description {
@@ -163,7 +168,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  /* font-family: var(--font-mono); */
 }
 
 .description a {
@@ -186,123 +190,28 @@
   font-weight: 700;
   font-family: var(--font-mono);
 }
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  .image{
-    height: 80%;
+  30% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
   }
-  .divider{
-    width: 30%; /* extends across the entire width of the page */
+  60% {
+    transform: scale(1);
   }
-  .imagecontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    
+  70% {
+    transform: scale(1.25);
   }
-  .title {
-    font-size: 2rem;
-    text-align: center;
+  80% {
+    transform: scale(1);
   }
-  .code {
-    font-size: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .bioContainer {
-    font-size: 1rem;
-  }
-  .cardContainer{
-    background: #e7e7e7;
-    width: 100%;
-    margin-top: 2rem;
-  }
-  .card {
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: -webkit-center;
-  }
-  .card h2 {
-    font-size: 2rem;
-  }
-  .card p {
-    font-size: 1.2rem;
-  }
-
-  .techGrid{
-    justify-content: center;
-    grid-template-columns: 7rem 7rem 7rem;
-    grid-template-rows: 8rem;
-    justify-items: center;
-    align-items: center;
-  }
-  .techCard{
-    width: 6rem;
-    height: 6rem;
-  }
-  .techCard img{
-    width: 2rem;
-  }
-  .techCard p{
-    font-size: 0.8rem;
-    font-weight: lighter;
-  }
-  .projectsContainer p{
-    font-size: 1rem;
-  }
-  .projectsGrid{
-    grid-template-columns: 30rem;
-    grid-template-rows: 25rem;
-    justify-content: center;
-    grid-row-gap: 5rem;
-  }
-  .projectCard{
-    display: grid;
-    grid-template-columns: 10rem 10rem;
-    grid-template-rows: 25rem;
-    column-gap: 1rem;
-  }
-  .projectTextContainer{
-    align-content: center;
-  }
-  .projectTextContainer h3{
-    font-size: 1.5rem;
-    margin: 1rem;
-    text-align: center;
-  }
-  .projectImages{
-    display: grid;
-    grid-template-columns: 15rem;
-    justify-items: center;
-    padding: 1rem;
+  100% {
+    transform: scale(1.25);
+    animation-timing-function: ease-in-out;
   }
 }
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
 @keyframes slide-top {
   0% {
     transform: translateY(100px);
