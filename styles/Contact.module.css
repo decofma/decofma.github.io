@@ -4,7 +4,8 @@
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
   }
   .card h2 {
     font-size: 3rem;
@@ -22,7 +23,7 @@
   .divider{
     width: 3%; /* extends across the entire width of the page */
     height: 7px; /* sets the height of the line */
-    background-color: #7843E9;
+    background-color: var(--purple-default);
     border-radius: 30px;
     align-self: center;
     margin: 2rem;
@@ -42,6 +43,12 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2rem;
+  }
+  .contact > a{
+    opacity: 80%;
+  }
+  .contact > a:hover{
+    opacity: 100%;
   }
   .contact a{
     font-size: 1.2rem;

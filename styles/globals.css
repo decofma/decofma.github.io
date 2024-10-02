@@ -38,6 +38,21 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  --purple-default:#877ed6;
+  --purple-hover:#6554af;
+  --purple-disabled:#e6e8f9;
+  --purple-text-disabled:#9897e2;
+  --purple-clear: #d1d4f4;
+
+  --purple-dark: #292442;
+  --purple-highlight: #6554af;
+  --purple-light: #f1f3fc;
+  --gray-dark: #2b2730;
+  --gray-medium: #776d8a;
+  --gray-light: #efedf1;
+  --light-purple: #9575DE;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,11 +104,11 @@ body {
 
 body.light {
   --background-color: #ffffff;
-  --text-color: #151515;
+  --text-color: #2B2730;
 }
 
 body.dark {
-  --background-color: #151515;
+  --background-color: #2B2730;
   --text-color: #ffffff;
 }
 

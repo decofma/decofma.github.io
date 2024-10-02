@@ -36,9 +36,9 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <nav className={layout.navbar}>
+      <nav className={`${layout.navbar} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}>
         <section onClick={() => handleNavigation("/")} className={layout.navItem}>
-          {'{ UNDER DEVELOPMENT }'}
+          {'{ ANDRÉ FERRAZ }'}
         </section>
         <ul className={layout.navList}>
           

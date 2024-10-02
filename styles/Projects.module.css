@@ -4,7 +4,8 @@
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
-    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
   }
   .card h2 {
     font-size: 3rem;
@@ -17,12 +18,12 @@
     text-align: justify;
   }
   .card b{
-    color: #7843E9;
+    color: var(--purple-default);;
   }
   .divider{
     width: 3%; /* extends across the entire width of the page */
     height: 7px; /* sets the height of the line */
-    background-color: #7843E9;
+    background-color: var(--purple-default);;
     border-radius: 30px;
     align-self: center;
     margin: 2rem;
@@ -31,8 +32,8 @@
   
   .projectsContainer{
     width: 100%;
-    margin: 2rem;
-    padding: 2rem;
+    /* margin: 2rem;
+    padding: 2rem; */
   }
   .projectsContainer h2{
     font-size: 3rem;

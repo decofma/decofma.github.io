@@ -5,12 +5,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
-  color: white;
   z-index: 100;
   opacity: 90%;
 }
-
+.darkNavbar{
+background-color: var(--gray-light);
+}
+.lightNavbar{
+  background-color: var(--gray-dark);
+}
 .navList {
   display: flex;
   list-style: none;
@@ -23,7 +26,7 @@
 }
 
 .navItem:hover {
-  color: #b37ff7; /* Cor de hover */
+  color: var(--purple-hover); /* Cor de hover */
 }
 
 /* Switch */
@@ -47,14 +50,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #cccc;
+  background-color: var(--gray-medium);
   border-radius: 20px;
   transition: 0.4s;
   cursor: pointer;
 }
 
 input:checked + .slider {
-  background-color: #8F43EE;
+  background-color: var(--purple-default);
 }
 
 /* Bolinha deslizante */
@@ -65,7 +68,7 @@ input:checked + .slider {
   width: 30px;
   left: 5px;
   bottom: 5px;
-  background-color: white;
+  background-color: var(--purple-light);
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -120,8 +123,8 @@ input:checked + .slider .iconMoon {
 }
 
 .languageButton {
-  background-color: transparent;
-  border: 2px solid white;
+  background-color: var(--gray-medium);
+  border: none;
   border-radius: 20px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -129,12 +132,11 @@ input:checked + .slider .iconMoon {
 }
 
 .languageButton:hover {
-  background-color: #b37ff7;
-  color: #413543;
+  background-color: var(--purple-hover);
 }
 
 .active {
-  background-color: #8F43EE;
+  background-color: var(--purple-default);
   color: white;
 }
 

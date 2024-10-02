@@ -27,7 +27,6 @@
 .title {
   margin: 2rem;  
   font-size: 2rem;
-  color: #444444;
   width: 70%;
   height: 4rem;
   text-align: center;
@@ -87,14 +86,16 @@
   justify-content: center;
 }
 .bioButton{
-  border: 2px solid white;
+  border: NONE;
   border-radius: 20px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
-  background-color: #7843E9;
+  background-color: var(--purple-default);
 }
-
+.bioButton:hover {
+  background-color: var(--purple-hover);
+}
 .code {
   line-height: 1.5;
   padding-left: 2rem;  
@@ -128,12 +129,12 @@
   text-align: justify;
 }
 .card b{
-  color: #7843E9;
+  color: var(--purple-default);
 }
 .divider{
   width: 3%; /* extends across the entire width of the page */
   height: 7px; /* sets the height of the line */
-  background-color: #7843E9;
+  background-color: var(--purple-default);
   border-radius: 30px;
   align-self: center;
   margin: 2rem;
