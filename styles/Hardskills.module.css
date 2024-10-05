@@ -26,12 +26,15 @@
     flex-direction: column;
   }
   
-    .techGrid{
+  .techGrid{
     display: grid;
     grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem ;
     justify-content: center;
     justify-items: center;
+    @media (max-width: 768px) {
+      grid-template-columns: 7rem 7rem 7rem 7rem
     }
+  }
     .divider{
     width: 3%; /* extends across the entire width of the page */
     height: 7px; /* sets the height of the line */

@@ -1,3 +1,5 @@
+/* --------- Global Styles --------- */
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -8,12 +10,16 @@
   z-index: 100;
   opacity: 90%;
 }
-.darkNavbar{
-background-color: var(--gray-light);
+
+.darkNavbar {
+  background-color: var(--gray-light);
 }
-.lightNavbar{
+
+.lightNavbar {
   background-color: var(--gray-dark);
 }
+
+/* Lista de navegação */
 .navList {
   display: flex;
   list-style: none;
@@ -77,44 +83,43 @@ input:checked + .slider:before {
   transform: translateX(40px);
 }
 
+/* Ícones para Sol e Lua */
 .icon {
   position: absolute;
   top: 50%;
   left: 8px;
-  transform: translateY(-50%) translateX(0); /* Adiciona translateX */
+  transform: translateY(-50%) translateX(0);
   width: 24px;
   height: 24px;
   background-image: url('/icons/sun.png');
   background-size: contain;
   background-repeat: no-repeat;
-  transition: opacity 200ms, transform 0.4s; /* Transição para opacidade e deslocamento */
+  transition: opacity 200ms, transform 0.4s;
   opacity: 1;
 }
 
-/* Imagem da Lua */
 .iconMoon {
   position: absolute;
   top: 50%;
   right: 28px;
-  transform: translateY(-50%) translateX(0); /* Adiciona translateX */
+  transform: translateY(-50%) translateX(0);
   width: 24px;
   height: 24px;
   background-image: url('/icons/moon.png');
   background-size: contain;
   background-repeat: no-repeat;
-  transition: opacity 200ms, transform 0.4s; /* Transição para opacidade e deslocamento */
+  transition: opacity 200ms, transform 0.4s;
   opacity: 0;
 }
 
-/* Quando o input estiver "checked" (dark mode ativo) */
 input:checked + .slider .icon {
   opacity: 0;
-  transform: translateY(-50%) translateX(20px); /* Desloca o sol para a esquerda */
+  transform: translateY(-50%) translateX(20px);
 }
 
 input:checked + .slider .iconMoon {
   opacity: 1;
-  transform: translateY(-50%) translateX(20px); /* Desloca a lua para a direita */
+  transform: translateY(-50%) translateX(20px);
 }
 
 .switchers {
@@ -122,6 +127,7 @@ input:checked + .slider .iconMoon {
   gap: 0.5rem;
 }
 
+/* Botões de Idioma */
 .languageButton {
   background-color: var(--gray-medium);
   border: none;
@@ -140,64 +146,83 @@ input:checked + .slider .iconMoon {
   color: white;
 }
 
+/* --------- Mobile Styles --------- */
 
-/* .menubar{
+/* Hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Estilizando as barras do hamburger */
+.hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: var(--gray-dark); /* Cor padrão */
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s;
+}
+
+/* Cor das barras no modo claro */
+.lightNavbar .hamburger div {
+  background-color: var(--gray-light);
+}
+
+/* Animação do hamburger ao abrir */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .navList {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gray-dark);
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .navItem {
     padding: 1rem;
-    padding-inline-start: 5rem;
-    padding-inline-end: 5rem;
-    border-radius: 0;
-    border: none;
-    background-color:rgb(255, 255, 255);
-    box-shadow: 0 10px 100px rgba(0,0,0,0.1);
-    position: fixed;
-    width: -webkit-fill-available;
-    z-index: 2;
-}
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-light);
+  }
 
-.menubar a{
-    padding-inline: 2rem;
-}
-.menubar span:hover{
-    color: #7843E9;
-}
-.menubar [class="p-button-label p-c"]{
-    color: #e7e7e7;
-}
-.menubar [class="p-button p-component p-highlight"],
-.menubar [class="p-button p-component p-highlight p-focus"]
-{
-    background-color: #7843E9;
-}
-.menubar span{
-    color: black;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-.menubar div{
-    margin-left: auto;
-}
+  /* Exibir o menu ao clicar no hamburger */
+  .navList.active {
+    display: flex;
+    max-height: 500px;
+  }
 
-@media (max-width: 700px) {
-    .menubar{
-        padding: 1rem;
-        border-radius: 0;
-        border: none;
-        background-color:rgb(255, 255, 255);
-        box-shadow: 0 10px 100px rgba(0,0,0,0.1);
-        position: fixed;
-        width: -webkit-fill-available;
-        z-index: 2;
-    }
-    .menubar [class="p-menuitem-text"]{
-        font-size: 1rem;
-        margin: 0.5rem;
-      }
-    .menubar [class="p-menubar-button"]{
-        padding-inline: 0rem;
-        background-color: black;
-    }
-    .menubar [class="p-menubar-root-list"]{
-        background-color: rgb(218, 218, 218)
-    }
-  
-  } */
+  /* Switchers de tema e idioma dentro do menu mobile */
+  .mobileSwitchers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

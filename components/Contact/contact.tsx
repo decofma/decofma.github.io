@@ -10,7 +10,6 @@ function Contact({ selectedLanguage }: HomeProps) {
     const Contact = selectedLanguage === 'ENG' ? C.EngContactTitle : C.PortContactTitle;
 
     return (
-        <>
         <div className={styles.contactContainer}>
           <div className={styles.card}>
             <h2> {Contact} </h2>
@@ -36,7 +35,6 @@ function Contact({ selectedLanguage }: HomeProps) {
             </a>
           </div> 
         </div>  
-        </>
     )
 }
 export default Contact
