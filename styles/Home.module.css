@@ -30,6 +30,9 @@
   width: 70%;
   height: 4rem;
   text-align: center;
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+  }
 }
 
 .bio {
@@ -104,10 +107,12 @@
   @media (max-width: 768px){
     padding-inline: 5rem;
   }
+  @media (max-width: 425px) {
+    font-size: 1rem;
+  }
 }
 
 .cardContainer{
-  /* background: #e7e7e7; */
   width: 100%;
   margin: 2rem;
   padding: 2rem;
@@ -120,6 +125,9 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 425px) {
+    max-width: 100%;
+  }
 }
 .card h2 {
   font-size: 3rem;
@@ -130,13 +138,16 @@
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: justify;
+  @media (max-width: 425px) {
+    font-size: 1rem;
+  }
 }
 .card b{
   color: var(--purple-default);
 }
 .divider{
-  width: 3%; /* extends across the entire width of the page */
-  height: 7px; /* sets the height of the line */
+  width: 3%; 
+  height: 7px;
   background-color: var(--purple-default);
   border-radius: 30px;
   align-self: center;

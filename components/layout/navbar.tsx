@@ -15,10 +15,10 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
   const options = ['ENG', 'PT'];
   const [language, setLanguage] = useState(selectedLanguage);
   const { theme, toggleTheme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false); // Controle do menu hambúrguer
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNavigation = (sectionId: string) => {
-    setIsOpen(false); // Fecha o menu ao navegar
+    setIsOpen(false); 
     router.push(sectionId);
   };
 
@@ -45,9 +45,9 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
         </section>
 
         <div className={layout.hamburger} onClick={toggleMenu}>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
         </div>
 
         <ul className={`${layout.navList} ${isOpen ? layout.showMenu : ''} ${theme === 'dark' ? layout.darkNavbar : layout.lightNavbar}`}>
