@@ -48,8 +48,9 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
           <div />
           <div />
           <div />
+          
         </div>
-
+        
         <ul className={`${layout.navList} ${menuOpen ? layout.active : ''}`}>
           <li onClick={() => handleNavigation("/#aboutSection")} className={layout.navItem}>
             {language === 'ENG' ? 'ABOUT' : 'SOBRE MIM'}
@@ -72,7 +73,7 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
                 type="checkbox"
                 checked={theme === 'dark'}
                 onChange={toggleTheme}
-              />
+                />
               <span className={layout.slider}>
                 <span className={layout.icon}></span>
                 <span className={layout.iconMoon}></span>
@@ -82,15 +83,15 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
             {/* Idioma (Botões) */}
             {options.map((option) => (
               <button
-                key={option}
-                className={`${layout.languageButton} ${language === option ? layout.active : ''}`}
-                onClick={() => handleLanguageChange(option)}
+              key={option}
+              className={`${layout.languageButton} ${language === option ? layout.active : ''}`}
+              onClick={() => handleLanguageChange(option)}
               >
                 {option}
               </button>
             ))}
           </div>
-        </ul>
+            </ul>
       </nav>
 
       <main>{children}</main>
