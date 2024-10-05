@@ -11,11 +11,11 @@
   opacity: 90%;
 }
 
-.darkNavbar {
+.lightNavbar {
   background-color: var(--gray-light);
 }
 
-.lightNavbar {
+.darkNavbar {
   background-color: var(--gray-dark);
 }
 
@@ -32,11 +32,11 @@
 }
 
 .navItem:hover {
-  color: var(--purple-hover); /* Cor de hover */
+  color: var(--purple-hover);
 }
 
 /* Switch */
-.mobileSwitchers {
+.switcherContainer {
   display: flex;
   gap: 0.5rem;
 }
@@ -54,7 +54,6 @@
   height: 0;
 }
 
-/* Slider */
 .slider {
   position: absolute;
   top: 0;
@@ -71,7 +70,6 @@ input:checked + .slider {
   background-color: var(--purple-default);
 }
 
-/* Bolinha deslizante */
 .slider:before {
   position: absolute;
   content: "";
@@ -127,11 +125,6 @@ input:checked + .slider .iconMoon {
   transform: translateY(-50%) translateX(20px);
 }
 
-.switchers {
-  display: flex;
-  gap: 0.5rem;
-}
-
 /* Botões de Idioma */
 .languageButton {
   background-color: var(--gray-medium);
@@ -146,88 +139,79 @@ input:checked + .slider .iconMoon {
   background-color: var(--purple-hover);
 }
 
-.active {
+.languageButtonActive {
   background-color: var(--purple-default);
   color: white;
 }
 
-/* --------- Mobile Styles --------- */
-
-/* Hamburger */
+/* Estilos para o botão hambúrguer */
 .hamburger {
   display: none;
   cursor: pointer;
   flex-direction: column;
-  gap: 5px;
-  width: 30px;
-  height: 20px;
-  transition: background-color 0.3s;
+  gap: 4px;
 }
 
-/* Estilizando as barras do hamburger */
-.hamburger div {
-  width: 100%;
-  height: 4px;
-  background-color: var(--gray-dark); /* Cor padrão */
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s;
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--gray-dark);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Cor das barras no modo claro */
-.lightNavbar .hamburger div {
-  background-color: var(--gray-light);
+.open:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
 }
 
-/* Animação do hamburger ao abrir */
-.hamburger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active div:nth-child(2) {
+.open:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Menu mobile */
+.showMenu {
+  display: block;
 }
 
 @media (max-width: 768px) {
   .navList {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
+    height: 200px;
     width: 100%;
     flex-direction: column;
-    align-items: center;
-    background-color: var(--gray-dark);
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
-  }
-
-  .navItem {
-    padding: 1rem;
-    width: 100%;
     text-align: center;
-    border-bottom: 1px solid var(--gray-light);
+    z-index: 100;
   }
 
-  /* Exibir o menu ao clicar no hamburger */
-  .navList.active {
-    display: flex;
-    max-height: 500px;
-  }
-
-  /* Switchers de tema e idioma dentro do menu mobile */
-  .mobileSwitchers {
-    display: flex;
+  .switcherContainer {
+    display: none;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
-    margin: 1rem 0;
+    position: absolute;
+    top: 50px; /* Posição abaixo da lista de navegação */
+    right: 0;
+    height: 200px;
+    padding: 1rem;
+    z-index: 100;
   }
 
   .hamburger {
+    display: flex;
+  }
+
+  .showMenu {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .showMenu + .switcherContainer {
     display: flex;
   }
 }

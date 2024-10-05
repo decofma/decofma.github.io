@@ -15,16 +15,20 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
   const options = ['ENG', 'PT'];
   const [language, setLanguage] = useState(selectedLanguage);
   const { theme, toggleTheme } = useTheme();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Controle do menu hambúrguer
 
   const handleNavigation = (sectionId: string) => {
+    setIsOpen(false); // Fecha o menu ao navegar
     router.push(sectionId);
-    setMenuOpen(false); // Fecha o menu ao clicar em um item
   };
 
   const handleLanguageChange = (newLanguage: string) => {
     setLanguage(newLanguage);
     setSelectedLanguage(newLanguage);
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -35,23 +39,18 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className={`${layout.navbar} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}>
+      <nav className={`${layout.navbar} ${theme === 'dark' ? layout.darkNavbar : layout.lightNavbar}`}>
         <section onClick={() => handleNavigation("/")} className={layout.navItem}>
           {'{ ANDRÉ FERRAZ }'}
         </section>
 
-        {/* Hamburger Menu */}
-        <div
-          className={`${layout.hamburger} ${menuOpen ? layout.active : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <div />
-          <div />
-          <div />
-          
+        <div className={layout.hamburger} onClick={toggleMenu}>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
+          <span className={`${layout.line} ${isOpen ? layout.open : ''}`}></span>
         </div>
-        
-        <ul className={`${layout.navList} ${menuOpen ? layout.active : ''}`}>
+
+        <ul className={`${layout.navList} ${isOpen ? layout.showMenu : ''} ${theme === 'dark' ? layout.darkNavbar : layout.lightNavbar}`}>
           <li onClick={() => handleNavigation("/#aboutSection")} className={layout.navItem}>
             {language === 'ENG' ? 'ABOUT' : 'SOBRE MIM'}
           </li>
@@ -64,34 +63,31 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
           <li onClick={() => handleNavigation("/#contactSection")} className={layout.navItem}>
             {language === 'ENG' ? 'CONTACT ME' : 'FALE COMIGO'}
           </li>
+        </ul>
 
-          {/* Switchers de tema e idioma dentro do menu mobile */}
-          <div className={layout.mobileSwitchers}>
-            {/* Tema (Switch) */}
-            <label className={layout.switch}>
-              <input
-                type="checkbox"
-                checked={theme === 'dark'}
-                onChange={toggleTheme}
-                />
-              <span className={layout.slider}>
-                <span className={layout.icon}></span>
-                <span className={layout.iconMoon}></span>
-              </span>
-            </label>
+        <div className={`${layout.switcherContainer} ${isOpen ? layout.showMenu : ''}`}>
+          <label className={layout.switch}>
+            <input
+              type="checkbox"
+              checked={theme === 'dark'}
+              onChange={toggleTheme}
+            />
+            <span className={layout.slider}>
+              <span className={layout.icon}></span>
+              <span className={layout.iconMoon}></span>
+            </span>
+          </label>
 
-            {/* Idioma (Botões) */}
-            {options.map((option) => (
-              <button
+          {options.map((option) => (
+            <button
               key={option}
-              className={`${layout.languageButton} ${language === option ? layout.active : ''}`}
+              className={`${layout.languageButton} ${language === option ? layout.languageButtonActive : ''}`}
               onClick={() => handleLanguageChange(option)}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-            </ul>
+            >
+              {option}
+            </button>
+          ))}
+        </div>
       </nav>
 
       <main>{children}</main>
