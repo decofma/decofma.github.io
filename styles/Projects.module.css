@@ -50,7 +50,7 @@
 }
 .projectCard {
   display: grid;
-  grid-template-columns: 30% 30%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 25rem;
   justify-content: center;
   justify-items: center;
@@ -109,9 +109,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  order: -1;
-  height: auto;
-  width: 70%;
+  @media (max-width: 425px) {
+    order: -1;
+    height: auto;
+    width: 70%;
+  }
 }
 .projectImage{
   @media (max-width: 425px) {
