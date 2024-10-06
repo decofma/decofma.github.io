@@ -1,55 +1,55 @@
 .card {
-    padding: 2rem;
-    margin: 2rem;
-    max-width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  .card h2 {
-    font-size: 3rem;
-    text-align: center;
-  }
-  .card p {
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    text-align: justify;
-  }
-  .card b{
-    color: #7843E9;
-  }
-  .divider{
-    width: 3%; /* extends across the entire width of the page */
-    height: 7px; /* sets the height of the line */
-    background-color: var(--purple-default);
-    border-radius: 30px;
-    align-self: center;
-    margin: 2rem;
-    filter: opacity(0.5);
-    }
-  
-  .contactContainer{
-    text-align: center;
-    width: 100%;
-    margin: 2rem;
-    padding: 2rem;
-  }
-  .contactBox h2{
-    font-size: 3rem;
-  }
-  .contact{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
-  }
-  .contact > a{
-    opacity: 80%;
-  }
-  .contact > a:hover{
-    opacity: 100%;
-  }
-  .contact a{
-    font-size: 1.2rem;
-  }
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+.card p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+.card b {
+  color: #7843e9;
+}
+.divider {
+  width: 3%; /* extends across the entire width of the page */
+  height: 7px; /* sets the height of the line */
+  background-color: var(--purple-default);
+  border-radius: 30px;
+  align-self: center;
+  margin: 2rem;
+  filter: opacity(0.5);
+}
+
+.contactContainer {
+  text-align: center;
+  width: 100%;
+  margin: 2rem;
+  padding: 2rem;
+}
+.contactBox h2 {
+  font-size: 3rem;
+}
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+.contact > a {
+  opacity: 80%;
+}
+.contact > a:hover {
+  opacity: 100%;
+}
+.contact a {
+  font-size: 1.2rem;
+}
