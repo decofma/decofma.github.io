@@ -1,7 +1,13 @@
 // context/ThemeContext.tsx
-import React, { createContext, useContext, useEffect, useState, ReactNode } from "react";  // Importando React
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react"; // Importando React
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 
 interface ThemeContextProps {
   theme: Theme;
@@ -19,10 +25,10 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme;
+    const savedTheme = localStorage.getItem("theme") as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
       document.body.className = savedTheme; // Define a classe no body para o tema
@@ -30,9 +36,9 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); // Salva o tema no localStorage
+    localStorage.setItem("theme", newTheme); // Salva o tema no localStorage
     document.body.className = newTheme; // Aplica a classe no body
   };
 

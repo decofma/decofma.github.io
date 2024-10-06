@@ -10,15 +10,19 @@ interface LayoutProps {
   setSelectedLanguage: (language: string) => void;
 }
 
-function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps) {
+function Navbar({
+  children,
+  selectedLanguage,
+  setSelectedLanguage,
+}: LayoutProps) {
   const router = useRouter();
-  const options = ['ENG', 'PT'];
+  const options = ["ENG", "PT"];
   const [language, setLanguage] = useState(selectedLanguage);
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleNavigation = (sectionId: string) => {
-    setIsOpen(false); 
+    setIsOpen(false);
     router.push(sectionId);
   };
 
@@ -39,37 +43,76 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className={`${layout.navbar} ${theme === 'dark' ? layout.darkNavbar : layout.lightNavbar}`}>
-        <section onClick={() => handleNavigation("/")} className={layout.navItem}>
-          {'{ ANDRÉ FERRAZ }'}
+      <nav
+        className={`${layout.navbar} ${
+          theme === "dark" ? layout.darkNavbar : layout.lightNavbar
+        }`}
+      >
+        <section
+          onClick={() => handleNavigation("/")}
+          className={layout.navItem}
+        >
+          {"{ ANDRÉ FERRAZ }"}
         </section>
 
         <div className={layout.hamburger} onClick={toggleMenu}>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
-          <span className={`${layout.line} ${isOpen ? layout.open : ''} ${theme === 'dark' ? layout.lightNavbar : layout.darkNavbar}`}></span>
+          <span
+            className={`${layout.line} ${isOpen ? layout.open : ""} ${
+              theme === "dark" ? layout.lightNavbar : layout.darkNavbar
+            }`}
+          ></span>
+          <span
+            className={`${layout.line} ${isOpen ? layout.open : ""} ${
+              theme === "dark" ? layout.lightNavbar : layout.darkNavbar
+            }`}
+          ></span>
+          <span
+            className={`${layout.line} ${isOpen ? layout.open : ""} ${
+              theme === "dark" ? layout.lightNavbar : layout.darkNavbar
+            }`}
+          ></span>
         </div>
 
-        <ul className={`${layout.navList} ${isOpen ? layout.showMenu : ''} ${theme === 'dark' ? layout.darkNavbar : layout.lightNavbar}`}>
-          <li onClick={() => handleNavigation("/#aboutSection")} className={layout.navItem}>
-            {language === 'ENG' ? 'ABOUT' : 'SOBRE MIM'}
+        <ul
+          className={`${layout.navList} ${isOpen ? layout.showMenu : ""} ${
+            theme === "dark" ? layout.darkNavbar : layout.lightNavbar
+          }`}
+        >
+          <li
+            onClick={() => handleNavigation("/#aboutSection")}
+            className={layout.navItem}
+          >
+            {language === "ENG" ? "ABOUT" : "SOBRE MIM"}
           </li>
-          <li onClick={() => handleNavigation("/#techSection")} className={layout.navItem}>
-            {language === 'ENG' ? 'HARD SKILLS' : 'HABILIDADES'}
+          <li
+            onClick={() => handleNavigation("/#techSection")}
+            className={layout.navItem}
+          >
+            {language === "ENG" ? "HARD SKILLS" : "HABILIDADES"}
           </li>
-          <li onClick={() => handleNavigation("/#projectsSection")} className={layout.navItem}>
-            {language === 'ENG' ? 'PROJECTS' : 'PROJETOS'}
+          <li
+            onClick={() => handleNavigation("/#projectsSection")}
+            className={layout.navItem}
+          >
+            {language === "ENG" ? "PROJECTS" : "PROJETOS"}
           </li>
-          <li onClick={() => handleNavigation("/#contactSection")} className={layout.navItem}>
-            {language === 'ENG' ? 'CONTACT ME' : 'FALE COMIGO'}
+          <li
+            onClick={() => handleNavigation("/#contactSection")}
+            className={layout.navItem}
+          >
+            {language === "ENG" ? "CONTACT ME" : "FALE COMIGO"}
           </li>
         </ul>
 
-        <div className={`${layout.switcherContainer} ${isOpen ? layout.showMenu : ''}`}>
+        <div
+          className={`${layout.switcherContainer} ${
+            isOpen ? layout.showMenu : ""
+          }`}
+        >
           <label className={layout.switch}>
             <input
               type="checkbox"
-              checked={theme === 'dark'}
+              checked={theme === "dark"}
               onChange={toggleTheme}
             />
             <span className={layout.slider}>
@@ -81,7 +124,9 @@ function Navbar({ children, selectedLanguage, setSelectedLanguage }: LayoutProps
           {options.map((option) => (
             <button
               key={option}
-              className={`${layout.languageButton} ${language === option ? layout.languageButtonActive : ''}`}
+              className={`${layout.languageButton} ${
+                language === option ? layout.languageButtonActive : ""
+              }`}
               onClick={() => handleLanguageChange(option)}
             >
               {option}

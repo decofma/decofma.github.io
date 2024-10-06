@@ -6,6 +6,9 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 .card h2 {
   font-size: 3rem;
@@ -31,9 +34,8 @@
 }
 
 .projectsContainer {
-  width: 100%;
-  /* margin: 2rem;
-    padding: 2rem; */
+  display: flex;
+  flex-direction: column;
 }
 .projectsContainer h2 {
   font-size: 3rem;
@@ -45,17 +47,30 @@
   @media (max-width: 768px) {
     grid-template-rows: 30rem 30rem 30rem 30rem;
   }
+  @media (max-width: 425px) {
+    grid-template-rows: 38rem 38rem 38rem 38rem;
+  }
 }
 .projectCard {
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 30% 30%;
   grid-template-rows: 25rem;
   justify-content: center;
   justify-items: center;
   text-align: justify;
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .projectTextContainer {
   align-content: center;
+  /* @media (max-width: 768px) {
+    width: 80%;  
+  } */
 }
 .projectTextContainer h3 {
   font-size: 2.5rem;
@@ -63,32 +78,57 @@
   text-align: center;
 }
 .projectTextContainer p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   @media (max-width: 768px) {
     font-size: 1rem;
   }
 }
 .projectIcons {
-  display: grid;
-  grid-template-rows: 7rem 7rem;
-  grid-template-columns: 10rem;
-  position: relative;
-  bottom: 20rem;
-  justify-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.lightIcon {
+  background-color: var(--gray-light);
+}
+
+.darkIcon {
+  background-color: var(--gray-dark);
+}
+
+.projectImages{
+  display: flex;
   align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+.projectImages:hover .projectIcons {
+  opacity: 1;
+}
+.projectIcon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.projectIcon:hover {
+  transform: scale(1.1); /* Zoom-in effect on hover */
 }
 .projectImages:hover .projectImage {
   animation: blur-in 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-.projectImages :hover .projectIcon {
+/* .projectImages :hover .projectIcon {
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both,
     slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   cursor: pointer;
-}
-.projectImages :not(:hover) .projectIcon {
+} */
+/* .projectImages :not(:hover) .projectIcon {
   animation: fade-out-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
+}  */
 
 @keyframes slide-top {
   0% {
