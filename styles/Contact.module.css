@@ -21,13 +21,16 @@
   color: #7843e9;
 }
 .divider {
-  width: 3%; /* extends across the entire width of the page */
-  height: 7px; /* sets the height of the line */
+  width: 3%; 
+  height: 7px; 
   background-color: var(--purple-default);
   border-radius: 30px;
   align-self: center;
   margin: 2rem;
   filter: opacity(0.5);
+  @media (max-width: 768px) {
+    width: 30%;
+  }
 }
 
 .contactContainer {
