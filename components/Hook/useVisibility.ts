@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 
-function checkVisibility(threshold: number = 0.3) {
+function useVisibility(threshold: number = 0.3) {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
 
@@ -14,13 +14,15 @@ function checkVisibility(threshold: number = 0.3) {
       { threshold }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [threshold]);
@@ -28,4 +30,4 @@ function checkVisibility(threshold: number = 0.3) {
   return { isVisible, elementRef };
 }
 
-export default checkVisibility;
+export default useVisibility;

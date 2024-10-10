@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/Projects.module.css";
 import { C } from "@/util/constants";
-import checkVisibility from "../Hook/checkVisibility";
+import checkVisibility from "../Hook/useVisibility";
 
 type HomeProps = {
   selectedLanguage: "ENG" | "PT";
