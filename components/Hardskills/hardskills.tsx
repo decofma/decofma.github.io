@@ -2,48 +2,27 @@ import Image from "next/image";
 import styles from "@/styles/Hardskills.module.css";
 import { C } from "@/util/constants";
 import { useEffect, useRef, useState } from "react";
+import checkVisibility from "../Hook/checkVisibility";
 
 type HomeProps = {
   selectedLanguage: "ENG" | "PT";
 };
 
 function Hardskills({ selectedLanguage }: HomeProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const { isVisible: isSkillVisible, elementRef: skillRef } = checkVisibility();
+  const { isVisible: isSkill2Visible, elementRef: skill2Ref } = checkVisibility();
+  const { isVisible: isSkill3Visible, elementRef: skill3Ref } = checkVisibility();
+  const { isVisible: isSkill4Visible, elementRef: skill4Ref } = checkVisibility();
   const hardskillsRef = useRef<HTMLDivElement>(null);
   const TechTitle =
     selectedLanguage === "ENG" ? C.EngTechTitle : C.PortTechTitle;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-        });
-      },
-      { threshold: 0.1 } // 10% da seção visível dispara a animação
-    );
-
-    if (hardskillsRef.current) {
-      observer.observe(hardskillsRef.current);
-    }
-
-    return () => {
-      if (hardskillsRef.current) {
-        observer.unobserve(hardskillsRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div className={styles.card}>
-      <h2> {TechTitle} </h2>
-      <div className={styles.divider} />
-      <div className={styles.techContainer}>
-        <div className={styles.techGrid}>
+    <div className={styles.techContainer}>
+      <div className={styles.card}>
+        <h2> {TechTitle} </h2>
+        <div className={styles.divider} />
+        <div ref={skillRef} className={`${styles.techGrid} ${isSkillVisible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             {" "}
             <Image
@@ -122,7 +101,7 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             <p>.Net</p>{" "}
           </div>
         </div>
-        <div className={styles.techGrid}>
+        <div ref={skill2Ref} className={`${styles.techGrid} ${isSkill2Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
@@ -244,7 +223,7 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             <p>Pandas</p>{" "}
           </div>
         </div>
-        <div className={styles.techGrid}>
+        <div ref={skill3Ref} className={`${styles.techGrid} ${isSkill3Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"
@@ -296,7 +275,7 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             <p>Sqlite</p>{" "}
           </div>
         </div>
-        <div className={styles.techGrid}>
+        <div ref={skill4Ref} className={`${styles.techGrid} ${isSkill4Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
