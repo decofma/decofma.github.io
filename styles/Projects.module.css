@@ -42,6 +42,9 @@
 }
 .projectsContainer h2 {
   font-size: 3rem;
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
 }
 .projectsGrid {
   display: grid;

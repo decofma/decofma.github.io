@@ -3,6 +3,10 @@
   width: 100%;
   margin: 2rem;
   padding: 2rem;
+  @media (max-width: 425px) {
+    margin: 0;
+  padding: 0;
+  }
 }
 .card {
   padding: 2rem;
@@ -16,6 +20,9 @@
 .card h2 {
   font-size: 3rem;
   text-align: center;
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
 }
 .card p {
   margin: 0;

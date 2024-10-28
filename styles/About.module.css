@@ -12,10 +12,16 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  @media (max-width: 425px) {
+    padding: 0;
+  }
 }
 .card h2 {
   font-size: 3rem;
   text-align: center;
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
 }
 
 .card p {
@@ -24,6 +30,9 @@
   line-height: 1.5;
   text-align: justify;
   transition: opacity 0.3s ease-in-out;
+  @media (max-width: 425px) {
+    font-size: 1rem;
+  }
 }
 .card b {
   color: #7843e9;
