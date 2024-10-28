@@ -38,7 +38,7 @@ function Projects({ selectedLanguage }: HomeProps) {
         <h2> {ProjectTitle} </h2>
         <div className={styles.divider} />
         <div className={styles.projectsGrid}>
-          <div ref={adocatRef} className={`${styles.projectCard} ${isAdocatVisible ? styles.bounceIn : styles.hidden}`}>
+          <div ref={adocatRef} className={`${styles.projectCard} ${isAdocatVisible ? styles.enterLeft : styles.hidden}`}>
             <div className={styles.projectTextContainer}>
               <h3> Adocat </h3>
               <p className={styles.projectText}> {AdocatText} </p>
@@ -78,7 +78,7 @@ function Projects({ selectedLanguage }: HomeProps) {
             </div>
           </div>
 
-          <div ref={monsterRef} className={`${styles.projectCard} ${isMonsterVisible ? styles.bounceIn : styles.hidden}`}>
+          <div ref={monsterRef} className={`${styles.projectCard} ${isMonsterVisible ? styles.enterRight : styles.hidden}`}>
             <div className={styles.projectImages}>
               <Image
                 className={styles.projectImage}
@@ -118,7 +118,7 @@ function Projects({ selectedLanguage }: HomeProps) {
             </div>
           </div>
 
-          <div ref={tictacRef} className={`${styles.projectCard} ${isTicTacVisible ? styles.bounceIn : styles.hidden}`}>
+          <div ref={tictacRef} className={`${styles.projectCard} ${isTicTacVisible ? styles.enterLeft : styles.hidden}`}>
             <div className={styles.projectTextContainer}>
               <h3> {TicTacToeTitle} </h3>
               <p className={styles.projectText}> {TicTacToeText} </p>
@@ -158,7 +158,7 @@ function Projects({ selectedLanguage }: HomeProps) {
             </div>
           </div>
 
-          <div ref={chaRef} className={`${styles.projectCard} ${isChaVisible ? styles.bounceIn : styles.hidden}`}>
+          <div ref={chaRef} className={`${styles.projectCard} ${isChaVisible ? styles.enterRight : styles.hidden}`}>
             <div className={styles.projectImages}>
               <Image
                 className={styles.projectImage}

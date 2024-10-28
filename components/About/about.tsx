@@ -22,7 +22,7 @@ function About({ selectedLanguage }: HomeProps) {
         <div className={styles.divider} />
         <p
           ref={pRef}
-          className={`${isPVisible ? styles.bounceIn : styles.hidden} ${styles.p}`}
+          className={`${isPVisible ? styles.enterLeft : styles.hidden} ${styles.p}`}
         >
           {BioText}
         </p>

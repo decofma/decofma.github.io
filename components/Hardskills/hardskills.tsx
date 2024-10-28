@@ -13,6 +13,8 @@ function Hardskills({ selectedLanguage }: HomeProps) {
   const { isVisible: isSkill2Visible, elementRef: skill2Ref } = checkVisibility();
   const { isVisible: isSkill3Visible, elementRef: skill3Ref } = checkVisibility();
   const { isVisible: isSkill4Visible, elementRef: skill4Ref } = checkVisibility();
+  const { isVisible: isSkill5Visible, elementRef: skill5Ref } = checkVisibility();
+  const { isVisible: isSkill6Visible, elementRef: skill6Ref } = checkVisibility();
   const hardskillsRef = useRef<HTMLDivElement>(null);
   const TechTitle =
     selectedLanguage === "ENG" ? C.EngTechTitle : C.PortTechTitle;
@@ -22,7 +24,9 @@ function Hardskills({ selectedLanguage }: HomeProps) {
       <div className={styles.card}>
         <h2> {TechTitle} </h2>
         <div className={styles.divider} />
-        <div ref={skillRef} className={`${styles.techGrid} ${isSkillVisible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
+        {/* <div ref={skill2Ref} className={`${styles.techGrid} ${isSkill2Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
+        </div> */}
+        <div ref={skillRef} className={`${styles.techGrid} ${isSkillVisible ? styles.enterLeft : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             {" "}
             <Image
@@ -89,19 +93,9 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             />
             <p>C#</p>{" "}
           </div>
-          <div className={styles.techCard}>
-            {" "}
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg"
-              alt="dot-net"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>.Net</p>{" "}
-          </div>
+         
         </div>
-        <div ref={skill2Ref} className={`${styles.techGrid} ${isSkill2Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
+        <div ref={skill2Ref} className={`${styles.techGrid} ${isSkill2Visible ? styles.enterRight : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
@@ -134,36 +128,6 @@ function Hardskills({ selectedLanguage }: HomeProps) {
           </div>
           <div className={styles.techCard}>
             <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
-              alt="flask"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>Flask</p>{" "}
-          </div>
-          <div className={styles.techCard}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-              alt="express"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>Express</p>{" "}
-          </div>
-          <div className={styles.techCard}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
-              alt="django"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>Django</p>{" "}
-          </div>
-          <div className={styles.techCard}>
-            <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-plain.svg"
               alt="angular"
               width={30}
@@ -174,23 +138,13 @@ function Hardskills({ selectedLanguage }: HomeProps) {
           </div>
           <div className={styles.techCard}>
             <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-plain.svg"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
               alt="vue"
               width={30}
               height={30}
               quality={100}
             />
             <p>Vue.js</p>{" "}
-          </div>
-          <div className={styles.techCard}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-              alt="tailwind"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>Tailwind</p>{" "}
           </div>
           <div className={styles.techCard}>
             <Image
@@ -204,26 +158,66 @@ function Hardskills({ selectedLanguage }: HomeProps) {
           </div>
           <div className={styles.techCard}>
             <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg"
-              alt="graphql"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+              alt="express"
               width={30}
               height={30}
               quality={100}
             />
-            <p>Graphql</p>{" "}
+            <p>Express</p>{" "}
           </div>
           <div className={styles.techCard}>
             <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-plain.svg"
-              alt="pandas"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+              alt="tailwind"
               width={30}
               height={30}
               quality={100}
             />
-            <p>Pandas</p>{" "}
+            <p>Tailwind</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+              alt="flask"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Flask</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg"
+              alt="django"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Django</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
+              alt="jest"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Jest</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-plain.svg"
+              alt="pytest"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Pytest</p>{" "}
           </div>
         </div>
-        <div ref={skill3Ref} className={`${styles.techGrid} ${isSkill3Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
+        <div ref={skill3Ref} className={`${styles.techGrid} ${isSkill3Visible ? styles.enterLeft : styles.hidden} ${styles.p}`}>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg"
@@ -274,8 +268,131 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             />
             <p>Sqlite</p>{" "}
           </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
+              alt="Prisma"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Prisma</p>{" "}
+          </div>
         </div>
-        <div ref={skill4Ref} className={`${styles.techGrid} ${isSkill4Visible ? styles.bounceIn : styles.hidden} ${styles.p}`}>
+        <div ref={skill4Ref} className={`${styles.techGrid} ${isSkill4Visible ? styles.enterRight : styles.hidden} ${styles.p}`}>
+          <div className={styles.techCard}>
+            <Image
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR4nOWVvUoDURCFPyMW/gTENrEzQjQEbNTHiCJpfYP4Emp6fxBR0FYkAZFoSq0EX0ElnWn8S9AQEY1cPQuX5W5wZQvBA5fdmT1z5t6Zmwn8FywBHd8qRJlg35FgLyrxCaAm0VlgRu81fQuFHuAcKAN5YBP4kOAbMAD0672jbxvilhUb65Zg0VGKNrAGpC1eWr62g280nBgCbkXaAS6AKyDbZUNZcQx3V7FGI+4ir1qEPvl69RxXCZpaJSDl45iYujSKrgRzwIsIpzqRJ/7gKMUdkPhifHOr8huNHAGYBloiZuQryz6WYBKoyHcgTkZ2Sxpd8SzyoOymbG+3BqPyPVkn6CiWsAkaspNRJHCVqCS7oiRG/ES+wzAlyllNrlpNTqmh/ibfA2NhmlwUoW5d05ieCTW0oXVoif8Y8V/80EIjaFSs+0aFwaU24cFwX4EVy3YOuzM1Nq9B9m4NOw8j6sEjMGwJpnStAxO4MGmNaw8LwJFu1rzvBMthE6A/Fztg2yrhVoBgqAQFX8CNmj8FXEeR4O/iE/WUpf/v7Ub/AAAAAElFTkSuQmCC"
+              alt="Rest"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Rest</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg"
+              alt="graphql"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Graphql</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-plain.svg"
+              alt="fastapi"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Fastapi</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-plain.svg"
+              alt="Swagger"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Swagger</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-plain.svg"
+              alt="postman"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Postman</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-plain.svg"
+              alt="Oauth"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>OAuth/OAuth2</p>{" "}
+          </div>
+        </div>
+        <div ref={skill5Ref} className={`${styles.techGrid} ${isSkill5Visible ? styles.enterLeft : styles.hidden} ${styles.p}`}>
+
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-plain.svg"
+              alt="Jira"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Jira</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg"
+              alt="Trello"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Trello</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-plain.svg"
+              alt="Slack"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Slack</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original.svg"
+              alt="Anaconda"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Anaconda</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg"
+              alt="Eclipse"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Eclipse</p>{" "}
+          </div>
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
@@ -286,6 +403,9 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             />
             <p>Figma</p>{" "}
           </div>
+        </div>
+        <div ref={skill6Ref} className={`${styles.techGrid} ${isSkill6Visible ? styles.enterRight : styles.hidden} ${styles.p}`}>
+          
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
@@ -306,16 +426,7 @@ function Hardskills({ selectedLanguage }: HomeProps) {
             />
             <p>Docker</p>{" "}
           </div>
-          <div className={styles.techCard}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-plain.svg"
-              alt="postman"
-              width={30}
-              height={30}
-              quality={100}
-            />
-            <p>Postman</p>{" "}
-          </div>
+          
           <div className={styles.techCard}>
             <Image
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
@@ -325,6 +436,16 @@ function Hardskills({ selectedLanguage }: HomeProps) {
               quality={100}
             />
             <p>Firebase</p>{" "}
+          </div>
+          <div className={styles.techCard}>
+            <Image
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg"
+              alt="Git"
+              width={30}
+              height={30}
+              quality={100}
+            />
+            <p>Git</p>{" "}
           </div>
         </div>
       </div>

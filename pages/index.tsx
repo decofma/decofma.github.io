@@ -22,11 +22,11 @@ export default function Home({ selectedLanguage }: HomeProps) {
 
   const { theme } = useTheme();
   const handleDownload = () => {
-    const fileToDownload =
+    const resume =
       selectedLanguage === "ENG"
-        ? "/archives/andre-ferraz-resume.pdf"
-        : "/archives/andre-ferraz-curriculo.pdf";
-    router.push(fileToDownload);
+        ? "https://www.canva.com/design/DAGJQWiPknQ/n-v4-OyhBGSzTmiYW_fXVQ/view?utm_content=DAGJQWiPknQ&utm_campaign=designshare&utm_medium=link&utm_source=viewer#2"
+        : "https://www.canva.com/design/DAGJQWiPknQ/n-v4-OyhBGSzTmiYW_fXVQ/view?utm_content=DAGJQWiPknQ&utm_campaign=designshare&utm_medium=link&utm_source=viewer#1";
+    window.open(resume, "_blank");
   };
 
   return (
