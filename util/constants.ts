@@ -25,7 +25,7 @@ export class C {
     static readonly EngProjectFlickdleTitle = 'Flickdle';
     static readonly EngProjectFlickdle = 'A fun and easy-to-use prototybe game where you guess the title of a movie based on the movie theme song. Developed using React, Typescript, and Next.js.';
     static readonly EngProjectLoginTitle = 'Login Challenge';
-    static readonly EngProjectLogin = 'Login Challenge is a game that highlights the negative impacts of bad design, chaotic layoyts, irritating interactions and poor navigation to showcase in a playful manner how poor design and usability practices can turn a simple task into a true test of patience. Developed using React, Typescript, and Next.js.';
+    static readonly EngProjectLogin = 'Login Challenge is a game that highlights the negative impacts of bad design, chaotic layouts, irritating interactions and poor navigation to showcase in a playful manner how poor design and usability practices can turn a simple task into a true test of patience. Developed using React, Typescript, and Next.js.';
 
     static readonly PortLine = 'Engenheiro da computação e desenvolvedor full stack @ WilsonSons';
     static readonly PortBioTitle = 'SOBRE MIM';
