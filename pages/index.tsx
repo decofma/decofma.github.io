@@ -24,8 +24,8 @@ export default function Home({ selectedLanguage }: HomeProps) {
   const handleDownload = () => {
     const resume =
       selectedLanguage === "ENG"
-        ? "https://www.canva.com/design/DAGJQWiPknQ/n-v4-OyhBGSzTmiYW_fXVQ/view?utm_content=DAGJQWiPknQ&utm_campaign=designshare&utm_medium=link&utm_source=viewer#2"
-        : "https://www.canva.com/design/DAGJQWiPknQ/n-v4-OyhBGSzTmiYW_fXVQ/view?utm_content=DAGJQWiPknQ&utm_campaign=designshare&utm_medium=link&utm_source=viewer#1";
+        ? "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#2"
+        : "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#1";
     window.open(resume, "_blank");
   };
 
