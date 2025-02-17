@@ -123,8 +123,8 @@ function Projects({ selectedLanguage }: HomeProps) {
               </div>
             </div>
             <div className={styles.projectTextContainer}>
-              <h3> MonsterBurguer </h3>
-              <p className={styles.projectText}> {MonsterText} </p>
+              <h3> Flickdle </h3>
+              <p className={styles.projectText}> {FlickdleText} </p>
             </div>
           </div>
           <div ref={adocatRef} className={`${styles.projectCard} ${isAdocatVisible ? styles.enterLeft : styles.hidden}`}>
