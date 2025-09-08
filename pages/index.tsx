@@ -24,8 +24,10 @@ export default function Home({ selectedLanguage }: HomeProps) {
   const handleDownload = () => {
     const resume =
       selectedLanguage === "ENG"
-        ? "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#2"
-        : "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#1";
+        ? "https://curriculum-andre-ferraz.my.canva.site/curriculo-andre-ferraz"
+        // ? "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#2"
+        : "https://curriculum-andre-ferraz.my.canva.site/curriculo-andre-ferraz";
+        // : "https://www.canva.com/design/DAGJQWiPknQ/EOSxtZq1-oaDsYQQMz1V0A/view#1";
     window.open(resume, "_blank");
   };
 
