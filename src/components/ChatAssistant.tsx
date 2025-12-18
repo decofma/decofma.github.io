@@ -12,12 +12,10 @@ export default function ChatAssistant({ lang }: { lang: 'pt' | 'en' }) {
   const t = ui[lang].chat;
   const [messages, setMessages] = useState<{ role: string, text: string }[]>([]);
 
-  // Scroll automático para a última mensagem
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isOpen]);
 
-  // Mensagem inicial
   useEffect(() => {
     if (messages.length === 0) {
       setMessages([{ role: "ai", text: t.welcome }]);

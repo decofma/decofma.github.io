@@ -4,8 +4,7 @@ import { personalData, experiences, gameData, knowledgeBase } from "../../../lib
 
 export async function POST(req: Request) {
   try {
-    // const apiKey = process.env.GEMINI_API_KEY;
-    const apiKey = 'AIzaSyDdqxy_faASJPaNpc7kyU4-Dy65pOC3yNU';
+    const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ text: "Erro: API Key não configurada." }, { status: 500 });
     }

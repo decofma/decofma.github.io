@@ -13,7 +13,6 @@ import {
   ShieldCheck 
 } from "lucide-react";
 
-// Mapeamento de ícones por categoria
 const categoryIcons: any = {
   "Languages & Core": Code2,
   "AI & Data Engineering": BrainCircuit,
@@ -30,7 +29,6 @@ export default function SkillTree({ lang }: { lang: 'pt' | 'en' }) {
 
   return (
     <section className="py-20 font-mono text-white">
-      {/* Cabeçalho */}
       <div className="flex items-center gap-4 mb-12">
         <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-purple-500/50"></div>
         <h2 className="text-2xl font-black italic text-purple-400 tracking-widest uppercase">
@@ -39,7 +37,6 @@ export default function SkillTree({ lang }: { lang: 'pt' | 'en' }) {
         <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-purple-500/50"></div>
       </div>
 
-      {/* Grid de Skills por Categoria */}
       <div className="space-y-12">
         {skillTree.map((cat, idx) => {
           const Icon = categoryIcons[cat.category] || Code2;
@@ -69,10 +66,8 @@ export default function SkillTree({ lang }: { lang: 'pt' | 'en' }) {
                       hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)]
                     "
                   >
-                    {/* Efeito de brilho no hover */}
                     <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 rounded-xl pointer-events-none" />
                     
-                    {/* Nome da Skill */}
                     <span className="text-xs font-bold text-gray-300 group-hover:text-white text-center">
                       {item}
                     </span>
@@ -84,7 +79,6 @@ export default function SkillTree({ lang }: { lang: 'pt' | 'en' }) {
         })}
       </div>
 
-      {/* Seção de Idiomas */}
       <div className="mt-16 p-6 border border-blue-500/30 bg-blue-900/10 rounded-lg relative overflow-hidden">
         <div className="absolute inset-0 bg-scanlines opacity-5 pointer-events-none" />
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
