@@ -51,7 +51,7 @@ export default function Experience({ lang }: { lang: 'pt' | 'en' }) {
 
             <div className="bg-purple-500/10 border border-purple-500/20 p-3 rounded-lg italic text-xs text-purple-200">
               <span className="font-bold text-purple-400">{t.iAndyTag}</span>
-              "{exp.iAndyComment[lang]}"
+              &quot;{exp.iAndyComment[lang]}&quot;
             </div>
           </motion.div>
         ))}

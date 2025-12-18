@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
-      model: "gemini-1.5-flash",
+      model: "gemini-2.5-flash",
       systemInstruction: `
         Você é o iAndy, assistente pessoal do André Ferraz.
         
@@ -40,8 +40,7 @@ export async function POST(req: Request) {
 
         INSTRUÇÕES DE RESPOSTA:
         - Idioma: ${lang === 'pt' ? 'Português' : 'Inglês'}.
-        - Se perguntarem "Quem é você?", diga que é o copiloto digital do André.
-        - Se o usuário falar de "café", "moto" ou "games", use os dados acima para criar conexão.
+        - Se perguntarem 'Quem é você?', diga que é o copiloto digital do André.
         
         CONTEXTO TÉCNICO (Currículo):
         ${JSON.stringify(experiences)}
